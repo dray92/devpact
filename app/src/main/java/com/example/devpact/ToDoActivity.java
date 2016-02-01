@@ -83,31 +83,10 @@ public class ToDoActivity extends Activity {
      */
     private ProgressBar mProgressBar;
 
-
-    // Run an Intent to start up the Android camera
+    // variables for photograph
     static final int REQUEST_TAKE_PHOTO = 1;
     public Uri mPhotoFileUri = null;
     public File mPhotoFile = null;
-
-    public void takePicture(View view) {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            try {
-                mPhotoFile = createImageFile();
-            } catch (IOException ex) {
-                // Error occurred while creating the File
-                //
-            }
-            // Continue only if the File was successfully created
-            if (mPhotoFile != null) {
-                mPhotoFileUri = Uri.fromFile(mPhotoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoFileUri);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
-        }
-    }
 
     /**
      * Initializes the activity
@@ -536,6 +515,27 @@ public class ToDoActivity extends Activity {
             });
 
             return resultFuture;
+        }
+    }
+
+    // Run an Intent to start up the Android camera
+    public void takePicture(View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        // Ensure that there's a camera activity to handle the intent
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            // Create the File where the photo should go
+            try {
+                mPhotoFile = createImageFile();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+                //
+            }
+            // Continue only if the File was successfully created
+            if (mPhotoFile != null) {
+                mPhotoFileUri = Uri.fromFile(mPhotoFile);
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoFileUri);
+                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+            }
         }
     }
 
