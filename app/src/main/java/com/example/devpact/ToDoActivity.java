@@ -38,6 +38,7 @@ import com.microsoft.windowsazure.mobileservices.table.sync.synchandler.SimpleSy
 
 import java.io.File;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.text.SimpleDateFormat;
@@ -96,6 +97,7 @@ public class ToDoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do);
 
+
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         // Initialize the progress bar
@@ -132,9 +134,10 @@ public class ToDoActivity extends Activity {
 
         } catch (MalformedURLException e) {
             createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
-        } catch (Exception e){
+        } catch (Exception e) {
             createAndShowDialog(e, "Error");
         }
+
     }
 
     /**
@@ -551,5 +554,26 @@ public class ToDoActivity extends Activity {
                 storageDir      /* directory */
         );
         return image;
+    }
+
+    /**
+     * pings http://www.google.com to check if device is connected
+     * to the internet
+     * @return  true if working internet connection is found
+     */
+    private boolean isInternetAvailable() {
+        try {
+            InetAddress ipAddr = InetAddress.getByName("http://www.google.com");
+
+            if (ipAddr.equals("")) {
+                return false;
+            } else {
+                return true;
+            }
+
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 }
