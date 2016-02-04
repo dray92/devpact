@@ -7,6 +7,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -21,6 +25,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -48,6 +53,7 @@ import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -115,6 +121,16 @@ public class ToDoActivity extends Activity {
     private final String[] AUTH_SERVERS = {"Google", "Facebook", "Microsoft Outlook"};
 
     /**
+     * Client device phone number
+     */
+    private String mPhoneNumber = "";
+
+    /**
+     * Picture location data
+     */
+    private String mPictureLocation = "";
+
+    /**
      * Initializes the activity
      */
     @Override
@@ -147,7 +163,7 @@ public class ToDoActivity extends Activity {
         // get user's phone number
         try {
             TelephonyManager tMgr = (TelephonyManager)getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
-            String mPhoneNumber = tMgr.getLine1Number();
+            mPhoneNumber = tMgr.getLine1Number();
             Log.d("Main Activity", "Phone number: " + mPhoneNumber);
         } catch(Exception e) {
             e.printStackTrace();
@@ -404,6 +420,7 @@ public class ToDoActivity extends Activity {
         item.setText(mTextNewToDo.getText().toString());
         item.setComplete(false);
         item.setContainerName("todoitemimages");
+        item.setPhoneNumber(mPhoneNumber);
 
         // Use a unigue GUID to avoid collisions.
         UUID uuid = UUID.randomUUID();
@@ -553,85 +570,6 @@ public class ToDoActivity extends Activity {
                 eq(val(false)).execute().get();
     }
 
-    //Offline Sync
-    /**
-     * Refresh the list with the items in the Mobile Service Sync Table
-     */
-    /*private List<ToDoItem> refreshItemsFromMobileServiceTableSyncTable() throws ExecutionException, InterruptedException {
-        //sync the data
-        sync().get();
-        Query query = QueryOperations.field("complete").
-                eq(val(false));
-        return mToDoTable.read(query).get();
-    }*/
-
-//    /**
-//     * Initialize local storage
-//     * @return
-//     * @throws MobileServiceLocalStoreException
-//     * @throws ExecutionException
-//     * @throws InterruptedException
-//     */
-//    private AsyncTask<Void, Void, Void> initLocalStore() throws MobileServiceLocalStoreException, ExecutionException, InterruptedException {
-//
-//        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
-//            @Override
-//            protected Void doInBackground(Void... params) {
-//                try {
-//
-//                    MobileServiceSyncContext syncContext = mClient.getSyncContext();
-//
-//                    if (syncContext.isInitialized())
-//                        return null;
-//
-//                    SQLiteLocalStore localStore = new SQLiteLocalStore(mClient.getContext(), "OfflineStore", null, 1);
-//
-//                    Map<String, ColumnDataType> tableDefinition = new HashMap<String, ColumnDataType>();
-//                    tableDefinition.put("id", ColumnDataType.String);
-//                    tableDefinition.put("text", ColumnDataType.String);
-//                    tableDefinition.put("complete", ColumnDataType.Boolean);
-//
-//                    localStore.defineTable("ToDoItem", tableDefinition);
-//
-//                    SimpleSyncHandler handler = new SimpleSyncHandler();
-//
-//                    syncContext.initialize(localStore, handler).get();
-//
-//                } catch (final Exception e) {
-//                    createAndShowDialogFromTask(e, "Error");
-//                }
-//
-//                return null;
-//            }
-//        };
-//
-//        return runAsyncTask(task);
-//    }
-//
-//    //Offline Sync
-//    /**
-//     * Sync the current context and the Mobile Service Sync Table
-//     * @return
-//     */
-//    /*
-//    private AsyncTask<Void, Void, Void> sync() {
-//        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
-//            @Override
-//            protected Void doInBackground(Void... params) {
-//                try {
-//                    MobileServiceSyncContext syncContext = mClient.getSyncContext();
-//                    syncContext.push().get();
-//                    mToDoTable.pull(null).get();
-//                } catch (final Exception e) {
-//                    createAndShowDialogFromTask(e, "Error");
-//                }
-//                return null;
-//            }
-//        };
-//        return runAsyncTask(task);
-//    }
-//    */
-
     /**
      * Creates a dialog and shows it
      *
@@ -756,6 +694,10 @@ public class ToDoActivity extends Activity {
                 mPhotoFileUri = Uri.fromFile(mPhotoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoFileUri);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+
+                // need location where picture was taken
+                LocationListener locationListener = new MyLocationListener();
+//                mPictureLocation
             }
         }
     }
@@ -868,5 +810,52 @@ public class ToDoActivity extends Activity {
     }
 
 
+    /**
+     * Listener class to get coordinates
+     */
+    private class MyLocationListener implements LocationListener {
+
+        private final String TAG = "Location Listener";
+
+        @Override
+        public void onLocationChanged(Location loc) {
+            Toast.makeText(
+                    getBaseContext(),
+                    "Location changed: Lat: " + loc.getLatitude() + " Lng: "
+                            + loc.getLongitude(), Toast.LENGTH_SHORT).show();
+            String longitude = "Longitude: " + loc.getLongitude();
+            Log.v(TAG, longitude);
+            String latitude = "Latitude: " + loc.getLatitude();
+            Log.v(TAG, latitude);
+
+        /*------- To get city name from coordinates -------- */
+            String cityName = null;
+            Geocoder gcd = new Geocoder(getBaseContext(), Locale.getDefault());
+            List<Address> addresses;
+            try {
+                addresses = gcd.getFromLocation(loc.getLatitude(),
+                        loc.getLongitude(), 1);
+                if (addresses.size() > 0) {
+                    System.out.println(addresses.get(0).getLocality());
+                    cityName = addresses.get(0).getLocality();
+                }
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            String s = longitude + "\n" + latitude + "\n\nMy Current City is: "
+                    + cityName;
+            Log.d(TAG, s);
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {}
+
+        @Override
+        public void onProviderEnabled(String provider) {}
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {}
+    }
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zumoappname"
+    package="com.example.devpactapp"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -23,6 +23,9 @@
 
     <!-- phone number used as ID -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- to access location data -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
