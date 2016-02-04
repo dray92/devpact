@@ -18,6 +18,29 @@ public class ToDoItem {
     private String mId;
 
     /**
+     * Phone number
+     */
+    @com.google.gson.annotations.SerializedName("phoneNumber")
+    private String mPhoneNumber;
+
+    /**
+     * Returns the phone number
+     */
+    public String getPhoneNumber() {
+        return mPhoneNumber;
+    }
+
+    /**
+     * Sets the item ImageUri
+     *
+     * @param PhoneNumber
+     *            PhoneNumber to set
+     */
+    public final void setPhoneNumber(String PhoneNumber) {
+        mPhoneNumber = PhoneNumber;
+    }
+
+    /**
      * Indicates if the item is completed
      */
     @com.google.gson.annotations.SerializedName("complete")
