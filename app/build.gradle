@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 16
+    compileSdkVersion 23
     buildToolsVersion "19.1.0"
-
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.example.devpactapp"
         minSdkVersion 15
@@ -11,6 +11,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false

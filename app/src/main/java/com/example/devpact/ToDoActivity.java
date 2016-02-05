@@ -22,6 +22,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -131,6 +132,11 @@ public class ToDoActivity extends Activity {
     private String mPictureLocation = "";
 
     /**
+     * Checks if authentication is required
+     */
+    private static final boolean OAUTH_REQUIRED = true;
+
+    /**
      * Initializes the activity
      */
     @Override
@@ -204,7 +210,7 @@ public class ToDoActivity extends Activity {
 
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            switch(which) {
+                            switch (which) {
                                 // Google
                                 case 0:
                                     selectedProvider =
@@ -248,6 +254,10 @@ public class ToDoActivity extends Activity {
                                     });
                         }
                     });
+
+            //
+            authAlertDialog.setCancelable(!OAUTH_REQUIRED);
+
             authAlertDialog.show();
 
         }
@@ -263,6 +273,7 @@ public class ToDoActivity extends Activity {
             createTable();
         }
     }
+
 
     /**
      * Detects if authentication is in progress and waits for it to complete.
@@ -291,6 +302,7 @@ public class ToDoActivity extends Activity {
         return detected;
     }
 
+
     /**
      * Waits for authentication to complete then adds or updates the token
      * in the X-ZUMO-AUTH request header.
@@ -310,6 +322,7 @@ public class ToDoActivity extends Activity {
             }
         }
     }
+
 
     private void createTable() {
 
@@ -331,6 +344,7 @@ public class ToDoActivity extends Activity {
         refreshItemsFromTable();
     }
 
+
     /**
      * Initializes the activity menu
      */
@@ -339,6 +353,7 @@ public class ToDoActivity extends Activity {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+
 
     /**
      * Select an option from the menu
@@ -351,6 +366,7 @@ public class ToDoActivity extends Activity {
 
         return true;
     }
+
 
     /**
      * !!!FOR DEBUGGING PURPOSES ONLY!!!
@@ -393,6 +409,7 @@ public class ToDoActivity extends Activity {
 
     }
 
+
     /**
      * Mark an item as completed in the Mobile Service Table
      *
@@ -402,6 +419,7 @@ public class ToDoActivity extends Activity {
     public void checkItemInTable(ToDoItem item) throws ExecutionException, InterruptedException {
         mToDoTable.update(item).get();
     }
+
 
     /**
      * Add a new item
@@ -413,6 +431,15 @@ public class ToDoActivity extends Activity {
         if (mClient == null) {
             return;
         }
+
+        // deactivate upload button
+        Button uploadButton = (Button) findViewById(R.id.buttonUpload);
+        uploadButton.setClickable(false);
+        uploadButton.setEnabled(false);
+
+        // reset take photo button text
+        Button previewButton = (Button) findViewById(R.id.buttonPreview);
+        previewButton.setText(R.string.preview_button_text);
 
         // Create a new item
         final ToDoItem item = new ToDoItem();
@@ -471,6 +498,7 @@ public class ToDoActivity extends Activity {
         mTextNewToDo.setText("");
     }
 
+
     /**
      * Add an item to the Mobile Service Table
      *
@@ -481,6 +509,7 @@ public class ToDoActivity extends Activity {
         ToDoItem entity = mToDoTable.insert(item).get();
         return entity;
     }
+
 
     /**
      * Refresh the list with the items in the Table
@@ -520,6 +549,7 @@ public class ToDoActivity extends Activity {
 
         runAsyncTask(task);
     }
+
 
     /**
      * This method stores the user id and token in a preference
@@ -561,14 +591,15 @@ public class ToDoActivity extends Activity {
         return true;
     }
 
+
     /**
      * Refresh the list with the items in the Mobile Service Table
      */
-
     private List<ToDoItem> refreshItemsFromMobileServiceTable() throws ExecutionException, InterruptedException {
         return mToDoTable.where().field("complete").
                 eq(val(false)).execute().get();
     }
+
 
     /**
      * Creates a dialog and shows it
@@ -604,6 +635,7 @@ public class ToDoActivity extends Activity {
         createAndShowDialog(ex.getMessage(), title);
     }
 
+
     /**
      * Creates a dialog and shows it
      *
@@ -620,6 +652,7 @@ public class ToDoActivity extends Activity {
         builder.create().show();
     }
 
+
     /**
      * Run an ASync task on the corresponding executor
      * @param task
@@ -632,6 +665,7 @@ public class ToDoActivity extends Activity {
             return task.execute();
         }
     }
+
 
     /**
      * The ProgressFilter class renders a progress bar on the screen during the time the App is waiting for the response of a previous request.
@@ -677,6 +711,7 @@ public class ToDoActivity extends Activity {
         }
     }
 
+
     // Run an Intent to start up the Android camera
     public void takePicture(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -695,12 +730,59 @@ public class ToDoActivity extends Activity {
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoFileUri);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
 
+                // activate upload button and change take photo
+                // button functionality
+                toggleUploadOn();
+
                 // need location where picture was taken
                 LocationListener locationListener = new MyLocationListener();
 //                mPictureLocation
             }
         }
     }
+
+
+    /**
+     * Changes button functionality when photo is available for upload
+     * Upload button activated
+     * Take photo button lets user retake photo
+     */
+    private void toggleUploadOn() {
+        // activate upload button
+        setUploadButton(true);
+
+        // change preview button text to let user capture new photo
+        // reset take photo button text
+        Button previewButton = (Button) findViewById(R.id.buttonPreview);
+        previewButton.setText(R.string.reset_preview_button_text);
+    }
+
+
+    /**
+     * Changes button functionality when photo is available for upload
+     * Upload button activated
+     * Take photo button lets user retake photo
+     */
+    private void toggleUploadOff() {
+        // deactivate upload button
+        setUploadButton(false);
+
+        // change preview button text to default
+        Button previewButton = (Button) findViewById(R.id.buttonPreview);
+        previewButton.setText(R.string.preview_button_text);
+    }
+
+
+    /**
+     * Sets the clickable and enabled states of the upload button
+     * @param state boolean state to turn upload button clickable and enable to on/off
+     */
+    private void setUploadButton(boolean state) {
+        Button uploadButton = (Button) findViewById(R.id.buttonUpload);
+        uploadButton.setClickable(state);
+        uploadButton.setEnabled(state);
+    }
+
 
     // Create a File object for storing the photo
     private File createImageFile() throws IOException {
@@ -716,6 +798,7 @@ public class ToDoActivity extends Activity {
         return image;
     }
 
+    
     /**
      * pings http://www.google.com to check if device is connected
      * to the internet

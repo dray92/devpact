@@ -8,6 +8,6 @@ package com.microsoft.azure.android;
 
 public final class R {
 	public static final class string {
-		public static final int dummyString = 0x7f040004;
+		public static final int dummyString = 0x7f050004;
 	}
 }

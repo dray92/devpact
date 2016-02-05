@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-notifications-handler/1.0.1/c322af100020e6db539f2aa367698d4b88fc453f/azure-notifications-handler-1.0.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c322af100020e6db539f2aa367698d4b88fc453f">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-notifications-handler-1.0.1-9b5fd9736466930fa8c0a635bbdfe55a60fba74c.jar" />
+    </item>
+    <item
         jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-mobile-services-android-sdk/2.0.3/5de03bab93697321e5654831bb98df11ad4c19ac/azure-mobile-services-android-sdk-2.0.3.jar"
         jumboMode="false"
         revision="19.1.0"
@@ -9,11 +16,11 @@
         <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-mobile-services-android-sdk-2.0.3-694fd946e47cd9378f096ae91d68daff940244a7.jar" />
     </item>
     <item
-        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.microsoft.azure.android/azure-storage-android/0.6.0/classes.jar"
+        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.microsoft.azure.android/azure-storage-android/0.6.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="83e59f115d18d0ff8ca28891e1793a4485a13a99">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-4faaca5df1168732e239b0ecf1837c44cd13be83.jar" />
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-6629c1f64cb72f7a2164e947dbf869ce60c259e3.jar" />
     </item>
     <item
         jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
@@ -21,13 +28,6 @@
         revision="19.1.0"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
         <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/gson-2.3-aa65f091cb4e3bd0a4dd33844b7738a307f9b231.jar" />
-    </item>
-    <item
-        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-notifications-handler/1.0.1/c322af100020e6db539f2aa367698d4b88fc453f/azure-notifications-handler-1.0.1.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="c322af100020e6db539f2aa367698d4b88fc453f">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-notifications-handler-1.0.1-9b5fd9736466930fa8c0a635bbdfe55a60fba74c.jar" />
     </item>
     <item
         jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"

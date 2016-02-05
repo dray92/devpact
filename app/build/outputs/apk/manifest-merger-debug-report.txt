@@ -53,7 +53,7 @@ uses-permission#android.permission.READ_PHONE_STATE
 ADDED from AndroidManifest.xml:20:5
 	android:name
 		ADDED from AndroidManifest.xml:20:22
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
+uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from AndroidManifest.xml:23:5
 	android:name
 		ADDED from AndroidManifest.xml:23:22

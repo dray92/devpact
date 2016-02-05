@@ -56,7 +56,9 @@
              android:layout_width="100dip"
              android:layout_height="wrap_content"
              android:onClick="uploadPhoto"
-             android:text="@string/upload_button_text" />
+             android:text="@string/upload_button_text"
+             android:clickable="false"
+             android:enabled="false" />
 
     </LinearLayout>
 
