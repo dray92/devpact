@@ -23,6 +23,52 @@ public class ToDoItem {
     @com.google.gson.annotations.SerializedName("phoneNumber")
     private String mPhoneNumber;
 
+
+    /**
+     * Latitude
+     */
+    @com.google.gson.annotations.SerializedName("latitude")
+    private String mLatitude;
+
+    /**
+     * Longitude
+     */
+    @com.google.gson.annotations.SerializedName("longitude")
+    private String mLongitude;
+
+
+    /**
+     * Returns the latitude
+     */
+    public String getLatitude() {
+        return mLatitude;
+    }
+
+    /**
+     * Sets the latitude
+     * @param latitude
+     *      latitude coordinate
+     */
+    public final void setLatitude(String latitude) {
+        this.mLatitude = latitude;
+    }
+
+    /**
+     * Sets the longitude
+     * @param longitude
+     *      longitude coordinate
+     */
+    public final void setLongitude(String longitude) {
+        this.mLongitude = longitude;
+    }
+
+    /**
+     * Returns the longitude
+     */
+    public String getLongitude() {
+        return mLongitude;
+    }
+
     /**
      * Returns the phone number
      */
@@ -31,7 +77,7 @@ public class ToDoItem {
     }
 
     /**
-     * Sets the item ImageUri
+     * Sets the item Phone number
      *
      * @param PhoneNumber
      *            PhoneNumber to set

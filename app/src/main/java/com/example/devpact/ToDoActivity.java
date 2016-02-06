@@ -15,7 +15,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -82,31 +81,30 @@ public class ToDoActivity extends Activity implements
      */
     private MobileServiceClient mClient;
 
+
     /**
      * Mobile Service Table used to access data
      */
     private MobileServiceTable<ToDoItem> mToDoTable;
 
-    //Offline Sync
-    /**
-     * Mobile Service Table used to access and Sync data
-     */
-    //private MobileServiceSyncTable<ToDoItem> mToDoTable;
 
     /**
      * Adapter to sync the items list with the view
      */
     private ToDoItemAdapter mAdapter;
 
+
     /**
      * EditText containing the "New To Do" text
      */
     private EditText mTextNewToDo;
 
+
     /**
      * Progress spinner to use for table operations
      */
     private ProgressBar mProgressBar;
+
 
     /**
      * variables for photograph
@@ -115,6 +113,8 @@ public class ToDoActivity extends Activity implements
     public Uri mPhotoFileUri = null;
     public File mPhotoFile = null;
     private static final String PHOTO_SAVED_BUNDLE = "myPhotoFile";
+    private boolean mPhotoFileExists = false;
+
 
     /**
      * cache authentication tokens
@@ -123,11 +123,13 @@ public class ToDoActivity extends Activity implements
     public static final String USERIDPREF = "uid";
     public static final String TOKENPREF = "tkn";
 
+
     /**
      * refresh authorization tokens
      */
     public boolean bAuthenticating = false;
     public final Object mAuthenticationLock = new Object();
+
 
     /**
      * constants needed to prompt user to
@@ -136,10 +138,12 @@ public class ToDoActivity extends Activity implements
     private final String AUTH_DIALOG_TITLE = "Choose a Login Method";
     private final String[] AUTH_SERVERS = {"Google Account (Gmail)", "Facebook", "Microsoft Outlook"};
 
+
     /**
      * Client device phone number
      */
     private String mPhoneNumber = "";
+
 
     /**
      * Picture location data
@@ -151,20 +155,24 @@ public class ToDoActivity extends Activity implements
     private LocationRequest mLocationRequest = null;
     private static final String LOCATION_SAVED_BUNDLE = "myLastLocationObject";
 
+
     /**
      * Google API client for location
      */
     private GoogleApiClient mGoogleApiClient;
 
+
     /**
      * Checks if authentication is required
      */
-    private static final boolean OAUTH_REQUIRED = false;
+    private static final boolean OAUTH_REQUIRED = true;
+
 
     /**
      *
      * Keep track of asking user for permission at runtime
      */
+    private static final int MY_PERMISSIONS_REQUEST_READ_PHONE_STATE = 0xaabbcc;
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 0xabcabc;
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 0xcbaabc;
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_EXTERNAL_STORAGE = 0xcbacba;
@@ -172,7 +180,14 @@ public class ToDoActivity extends Activity implements
     private int PERMISSION_ACCESS_FINE_LOCATION = 0;
     private int PERMISSION_ACCESS_COARSE_LOCATION = 0;
     private int PERMISSION_ACCESS_EXTERNAL_STORAGE = 0;
+    private int PERMISSION_READ_PHONE_STATE = 0;
 
+
+    /**
+     * to restore states, app must run at least once,
+     * to set the appropriate variables
+     */
+    private boolean hasRunOnce = false;
 
     /**
      * Initializes the activity
@@ -187,7 +202,7 @@ public class ToDoActivity extends Activity implements
         // Initialize the progress bar
         mProgressBar.setVisibility(ProgressBar.GONE);
 
-        if(mClient != null) {
+        if(mClient == null) {
             try {
                 // Create the Mobile Service Client instance, using the provided
                 // Mobile Service URL and key
@@ -206,16 +221,6 @@ public class ToDoActivity extends Activity implements
             }
         }
 
-        // get user's phone number
-        try {
-            TelephonyManager tMgr = (TelephonyManager) getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
-            mPhoneNumber = tMgr.getLine1Number();
-            Log.d("Main Activity", "Phone number: " + mPhoneNumber);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.e("Main Activity", "Could not retrieve user phone number");
-        }
-
         // Create an instance of GoogleAPIClient.
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -226,6 +231,52 @@ public class ToDoActivity extends Activity implements
         }
 
         updateDataFromBundle(savedInstanceState);
+    }
+
+
+    private void retrievePhoneNumber() {
+
+        // External storage write permission
+        PERMISSION_READ_PHONE_STATE = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_PHONE_STATE);
+
+        /**
+         * Check if permissions were set
+         * If so, return true
+         */
+        if(PERMISSION_READ_PHONE_STATE == PackageManager.PERMISSION_GRANTED) {
+            // get user's phone number
+            try {
+                TelephonyManager tMgr = (TelephonyManager) getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+                mPhoneNumber = tMgr.getLine1Number();
+                Log.d("Main Activity", "Phone number: " + mPhoneNumber);
+                return;
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("Main Activity", "Could not retrieve user phone number");
+            }
+
+        }
+
+        /**
+         * Check if READ_PHONE_STATE permission is set. Request user if not.
+         */
+        if(PERMISSION_READ_PHONE_STATE != PackageManager.PERMISSION_GRANTED) {
+
+            // Does the the user needs an explanation?
+            // check if app has requested this permission previously and the user denied the request
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.READ_PHONE_STATE))
+                createAndShowDialog("This app needs your phone number to validate the issue",
+                        "Phone Number Needed");
+
+            // request permission
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_PHONE_STATE},
+                    MY_PERMISSIONS_REQUEST_READ_PHONE_STATE);
+        }
+
+
     }
 
 
@@ -244,10 +295,16 @@ public class ToDoActivity extends Activity implements
             }
 
             if (savedInstanceState.keySet().contains(PHOTO_SAVED_BUNDLE)) {
-                mPhotoFile = savedInstanceState.getParcelable(PHOTO_SAVED_BUNDLE);
+                mPhotoFileExists = savedInstanceState.getBoolean(PHOTO_SAVED_BUNDLE);
             }
 
         }
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
 
@@ -261,6 +318,7 @@ public class ToDoActivity extends Activity implements
         super.onStop();
     }
 
+
     /**
      * When user switches to another app, don't want
      * location updates to keep coming in.
@@ -268,8 +326,9 @@ public class ToDoActivity extends Activity implements
     @Override
     protected void onPause() {
         super.onPause();
-        LocationServices.FusedLocationApi.removeLocationUpdates(
-                mGoogleApiClient, this);
+        if(mGoogleApiClient.isConnected())
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+        hasRunOnce = true;
     }
 
 
@@ -280,10 +339,11 @@ public class ToDoActivity extends Activity implements
     @Override
     protected void onResume() {
         super.onResume();
-        if(!mGoogleApiClient.isConnected())
-            mGoogleApiClient.connect();
-
-        startLocationUpdates();
+        if(mPhotoFileExists) {
+            if (mGoogleApiClient != null && !mGoogleApiClient.isConnected() && hasRunOnce) {
+                mGoogleApiClient.connect();
+            }
+        }
     }
 
 
@@ -294,6 +354,7 @@ public class ToDoActivity extends Activity implements
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putParcelable(LOCATION_SAVED_BUNDLE, mLastLocation);
+        savedInstanceState.putBoolean(PHOTO_SAVED_BUNDLE, mPhotoFileExists);
         super.onSaveInstanceState(savedInstanceState);
     }
 
@@ -366,6 +427,9 @@ public class ToDoActivity extends Activity implements
                                                 } else {
                                                     createAndShowDialog(exception.getMessage(), "Login Error");
                                                 }
+                                                // request phone number once auth is done
+                                                retrievePhoneNumber();
+
                                                 bAuthenticating = false;
                                                 mAuthenticationLock.notifyAll();
                                             }
@@ -551,6 +615,8 @@ public class ToDoActivity extends Activity implements
         item.setComplete(false);
         item.setContainerName("todoitemimages");
         item.setPhoneNumber(mPhoneNumber);
+        item.setLatitude(mLastLatitude);
+        item.setLongitude(mLastLongitude);
 
         // Use a unigue GUID to avoid collisions.
         UUID uuid = UUID.randomUUID();
@@ -859,11 +925,11 @@ public class ToDoActivity extends Activity implements
                     // functionality that depends on this permission.
                     PERMISSION_ACCESS_COARSE_LOCATION = PackageManager.PERMISSION_DENIED;
 
-                    createAndShowDialog("Need access to location data to understand " +
-                            "where the photo was captured", "Permission not found");
+//                    createAndShowDialog("Need access to location data to understand " +
+//                            "where the photo was captured", "Permission not found");
 
                     Toast.makeText(getApplicationContext(), "Need access to location data to " +
-                            "understand where the photo was captured", Toast.LENGTH_LONG).show();
+                            "understand where the photo was captured", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -891,11 +957,11 @@ public class ToDoActivity extends Activity implements
                     // functionality that depends on this permission.
                     PERMISSION_ACCESS_COARSE_LOCATION = PackageManager.PERMISSION_DENIED;
 
-                    createAndShowDialog("Need access to location data to understand " +
-                            "where the photo was captured", "Permission not found");
+//                    createAndShowDialog("Need access to location data to understand " +
+//                            "where the photo was captured", "Permission not found");
 
                     Toast.makeText(getApplicationContext(), "Need access to location data to " +
-                            "understand where the photo was captured", Toast.LENGTH_LONG).show();
+                            "understand where the photo was captured", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -929,7 +995,30 @@ public class ToDoActivity extends Activity implements
                             "photo", "Permission not found");
 
                     Toast.makeText(getApplicationContext(), "Need access to external storage " +
-                            "to store captured photo", Toast.LENGTH_LONG).show();
+                            "to store captured photo", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            case MY_PERMISSIONS_REQUEST_READ_PHONE_STATE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay!
+                    PERMISSION_READ_PHONE_STATE = ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.READ_PHONE_STATE);
+
+                    retrievePhoneNumber();
+
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    PERMISSION_READ_PHONE_STATE = PackageManager.PERMISSION_DENIED;
+
+                    createAndShowDialog("Need phone number to validate", "Permission not found");
+
+                    Toast.makeText(getApplicationContext(), "Need phone number to " +
+                            "validate", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -1081,11 +1170,11 @@ public class ToDoActivity extends Activity implements
                 }
             } catch (IOException ex) {
                 // Error occurred while creating the File
-                Toast.makeText(getApplicationContext(), "Could not create file to store photo", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Could not create file to store photo", Toast.LENGTH_SHORT).show();
             }
 
         } else {
-            Toast.makeText(getApplicationContext(), "No camera activity to handle intent", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "No camera activity to handle intent", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -1106,7 +1195,7 @@ public class ToDoActivity extends Activity implements
             // if location data is not available, cannot let user upload photo
             if (wereLocationServicesPermitted()) {
                 // request location update
-                createLocationRequest();
+//                createLocationRequest();
 
                 // activate upload button and change take photo
                 // button functionality
@@ -1190,8 +1279,12 @@ public class ToDoActivity extends Activity implements
             wereLocationServicesPermitted();
             return;
         }
-        LocationServices.FusedLocationApi.requestLocationUpdates(
-                mGoogleApiClient, mLocationRequest, (LocationListener) this);
+        if(mLocationRequest == null)
+            // create
+            createLocationRequest();
+        else
+            LocationServices.FusedLocationApi.requestLocationUpdates(
+                    mGoogleApiClient, mLocationRequest, (LocationListener) this);
     }
 
 
@@ -1206,13 +1299,15 @@ public class ToDoActivity extends Activity implements
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    
+
     // Create a File object for storing the photo
     private File createImageFile() throws IOException {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        File storageDir = getApplicationContext().getFilesDir();//Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+        mPhotoFileExists = true;
 
         // check if access to external storage exists
         // if returned true, return the new file
