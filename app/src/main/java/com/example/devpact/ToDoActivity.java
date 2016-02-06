@@ -1,22 +1,24 @@
 package com.example.devpact;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.content.SharedPreferences;
-import android.location.Address;
-import android.location.Geocoder;
+import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
@@ -28,6 +30,18 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResult;
+import com.google.android.gms.location.LocationSettingsStates;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -48,20 +62,20 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
 
-public class ToDoActivity extends Activity {
+
+public class ToDoActivity extends Activity implements
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     /**
      * Mobile Service Client reference
@@ -100,6 +114,7 @@ public class ToDoActivity extends Activity {
     static final int REQUEST_TAKE_PHOTO = 1;
     public Uri mPhotoFileUri = null;
     public File mPhotoFile = null;
+    private static final String PHOTO_SAVED_BUNDLE = "myPhotoFile";
 
     /**
      * cache authentication tokens
@@ -119,7 +134,7 @@ public class ToDoActivity extends Activity {
      * login if the previous token expired
      */
     private final String AUTH_DIALOG_TITLE = "Choose a Login Method";
-    private final String[] AUTH_SERVERS = {"Google", "Facebook", "Microsoft Outlook"};
+    private final String[] AUTH_SERVERS = {"Google Account (Gmail)", "Facebook", "Microsoft Outlook"};
 
     /**
      * Client device phone number
@@ -129,12 +144,35 @@ public class ToDoActivity extends Activity {
     /**
      * Picture location data
      */
-    private String mPictureLocation = "";
+    private Location mLastLocation;
+    private String mLastLatitude = "";
+    private String mLastLongitude = "";
+    private static final String DEFAULT_LOCATION_NOT_FOUND = "Location is NULL";
+    private LocationRequest mLocationRequest = null;
+    private static final String LOCATION_SAVED_BUNDLE = "myLastLocationObject";
+
+    /**
+     * Google API client for location
+     */
+    private GoogleApiClient mGoogleApiClient;
 
     /**
      * Checks if authentication is required
      */
-    private static final boolean OAUTH_REQUIRED = true;
+    private static final boolean OAUTH_REQUIRED = false;
+
+    /**
+     *
+     * Keep track of asking user for permission at runtime
+     */
+    private static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 0xabcabc;
+    private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 0xcbaabc;
+    private static final int MY_PERMISSIONS_REQUEST_ACCESS_EXTERNAL_STORAGE = 0xcbacba;
+    private static final int LOCATION_REQUEST_CHECK_SETTINGS = 0xabccba;
+    private int PERMISSION_ACCESS_FINE_LOCATION = 0;
+    private int PERMISSION_ACCESS_COARSE_LOCATION = 0;
+    private int PERMISSION_ACCESS_EXTERNAL_STORAGE = 0;
+
 
     /**
      * Initializes the activity
@@ -149,32 +187,114 @@ public class ToDoActivity extends Activity {
         // Initialize the progress bar
         mProgressBar.setVisibility(ProgressBar.GONE);
 
-        try {
-            // Create the Mobile Service Client instance, using the provided
-            // Mobile Service URL and key
-            mClient = new MobileServiceClient(
-                    "https://devpact.azure-mobile.net/",
-                    "TxUfvhAhXNpJPtrsFzWLQyuWPlwbgW11", this)
-                    .withFilter(new ProgressFilter())
-                    .withFilter(new RefreshTokenCacheFilter());
+        if(mClient != null) {
+            try {
+                // Create the Mobile Service Client instance, using the provided
+                // Mobile Service URL and key
+                mClient = new MobileServiceClient(
+                        "https://devpact.azure-mobile.net/",
+                        "TxUfvhAhXNpJPtrsFzWLQyuWPlwbgW11", this)
+                        .withFilter(new ProgressFilter())
+                        .withFilter(new RefreshTokenCacheFilter());
 
-            // Authenticate passing false to load the current token cache if available.
-            authenticate(false);
+                // Authenticate passing false to load the current token cache if available.
+                authenticate(false);
 
-        } catch (MalformedURLException e) {
-            createAndShowDialog(new Exception("Error creating the Mobile Service. " +
-                    "Verify the URL"), "Error");
+            } catch (MalformedURLException e) {
+                createAndShowDialog(new Exception("Error creating the Mobile Service. " +
+                        "Verify the URL"), "Error");
+            }
         }
 
         // get user's phone number
         try {
-            TelephonyManager tMgr = (TelephonyManager)getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+            TelephonyManager tMgr = (TelephonyManager) getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
             mPhoneNumber = tMgr.getLine1Number();
             Log.d("Main Activity", "Phone number: " + mPhoneNumber);
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             Log.e("Main Activity", "Could not retrieve user phone number");
         }
+
+        // Create an instance of GoogleAPIClient.
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+
+        updateDataFromBundle(savedInstanceState);
+    }
+
+
+    /**
+     * sets mission critical variables to appropriate states
+     * @param savedInstanceState
+     */
+    private void updateDataFromBundle(Bundle savedInstanceState) {
+        if(savedInstanceState != null) {
+            // Update the value of mCurrentLocation from the Bundle and update the
+            // UI to show the correct latitude and longitude.
+            if (savedInstanceState.keySet().contains(LOCATION_SAVED_BUNDLE)) {
+                // Since LOCATION_KEY was found in the Bundle, we can be sure that
+                // mCurrentLocationis not null.
+                mLastLocation = savedInstanceState.getParcelable(LOCATION_SAVED_BUNDLE);
+            }
+
+            if (savedInstanceState.keySet().contains(PHOTO_SAVED_BUNDLE)) {
+                mPhotoFile = savedInstanceState.getParcelable(PHOTO_SAVED_BUNDLE);
+            }
+
+        }
+    }
+
+
+    /**
+     * Initializes the onStop method for activity
+     */
+    @Override
+    protected void onStop() {
+        // disconnect Google API client
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    /**
+     * When user switches to another app, don't want
+     * location updates to keep coming in.
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        LocationServices.FusedLocationApi.removeLocationUpdates(
+                mGoogleApiClient, this);
+    }
+
+
+    /**
+     * When the user comes back in, time to start
+     * location updates
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(!mGoogleApiClient.isConnected())
+            mGoogleApiClient.connect();
+
+        startLocationUpdates();
+    }
+
+
+    /**
+     * Ensure that my last location is always accessible
+     * @param savedInstanceState
+     */
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putParcelable(LOCATION_SAVED_BUNDLE, mLastLocation);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
 
@@ -191,8 +311,7 @@ public class ToDoActivity extends Activity {
 
         bAuthenticating = true;
 
-        if (bRefreshCache || !loadUserTokenCache(mClient))
-        {
+        if (bRefreshCache || !loadUserTokenCache(mClient)) {
             // if for some reason, authentication was not available,
             // user needs to be prompted to login again
 
@@ -260,13 +379,10 @@ public class ToDoActivity extends Activity {
 
             authAlertDialog.show();
 
-        }
-        else
-        {
+        } else {
             // Other threads may be blocked waiting to be notified when
             // authentication is complete.
-            synchronized(mAuthenticationLock)
-            {
+            synchronized (mAuthenticationLock) {
                 bAuthenticating = false;
                 mAuthenticationLock.notifyAll();
             }
@@ -281,20 +397,16 @@ public class ToDoActivity extends Activity {
      */
     public boolean detectAndWaitForAuthentication() {
         boolean detected = false;
-        synchronized(mAuthenticationLock)
-        {
-            do
-            {
+        synchronized (mAuthenticationLock) {
+            do {
                 if (bAuthenticating == true)
                     detected = true;
-                try
-                {
+                try {
                     mAuthenticationLock.wait(1000);
+                } catch (InterruptedException e) {
                 }
-                catch(InterruptedException e)
-                {}
             }
-            while(bAuthenticating == true);
+            while (bAuthenticating == true);
         }
         if (bAuthenticating == true)
             return true;
@@ -312,11 +424,9 @@ public class ToDoActivity extends Activity {
      */
     private void waitAndUpdateRequestToken(ServiceFilterRequest request) {
         MobileServiceUser user = null;
-        if (detectAndWaitForAuthentication())
-        {
+        if (detectAndWaitForAuthentication()) {
             user = mClient.getCurrentUser();
-            if (user != null)
-            {
+            if (user != null) {
                 request.removeHeader("X-ZUMO-AUTH");
                 request.addHeader("X-ZUMO-AUTH", user.getAuthenticationToken());
             }
@@ -324,14 +434,13 @@ public class ToDoActivity extends Activity {
     }
 
 
+    /**
+     * Initialize the table of entries entered by this user
+     */
     private void createTable() {
 
         // Get the Mobile Service Table instance to use
-
         mToDoTable = mClient.getTable(ToDoItem.class);
-
-        // Offline Sync
-        //mToDoTable = mClient.getSyncTable("ToDoItem", ToDoItem.class);
 
         mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
 
@@ -383,7 +492,7 @@ public class ToDoActivity extends Activity {
         // Set the item as completed and update it in the table
         item.setComplete(true);
 
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
@@ -433,13 +542,7 @@ public class ToDoActivity extends Activity {
         }
 
         // deactivate upload button
-        Button uploadButton = (Button) findViewById(R.id.buttonUpload);
-        uploadButton.setClickable(false);
-        uploadButton.setEnabled(false);
-
-        // reset take photo button text
-        Button previewButton = (Button) findViewById(R.id.buttonPreview);
-        previewButton.setText(R.string.preview_button_text);
+        toggleUploadOff();
 
         // Create a new item
         final ToDoItem item = new ToDoItem();
@@ -456,7 +559,7 @@ public class ToDoActivity extends Activity {
 
         // Send the item to be inserted. When blob properties are set this
         // generates an SAS in the response.
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
@@ -481,7 +584,7 @@ public class ToDoActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            if(!entity.isComplete()){
+                            if (!entity.isComplete()) {
                                 mAdapter.add(entity);
                             }
                         }
@@ -519,7 +622,7 @@ public class ToDoActivity extends Activity {
         // Get the items that weren't marked as completed and add them in the
         // adapter
 
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
 
@@ -539,7 +642,7 @@ public class ToDoActivity extends Activity {
                             }
                         }
                     });
-                } catch (final Exception e){
+                } catch (final Exception e) {
                     createAndShowDialogFromTask(e, "Error");
                 }
 
@@ -629,7 +732,7 @@ public class ToDoActivity extends Activity {
      */
     private void createAndShowDialog(Exception exception, String title) {
         Throwable ex = exception;
-        if(exception.getCause() != null){
+        if (exception.getCause() != null) {
             ex = exception.getCause();
         }
         createAndShowDialog(ex.getMessage(), title);
@@ -664,6 +767,259 @@ public class ToDoActivity extends Activity {
         } else {
             return task.execute();
         }
+    }
+
+
+    /**
+     * For Google API Client
+     * @param bundle
+     */
+    @Override
+    public void onConnected(Bundle bundle) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            /**
+             *  recheck if permissions were set
+             *  if not, ask user for permission
+             */
+
+            wereLocationServicesPermitted();
+
+            mLastLatitude = "Location not permitted";
+            mLastLongitude = "Location not permitted";
+            return;
+        }
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+
+        // refresh the location
+        startLocationUpdates();
+
+        if (mLastLocation != null) {
+            mLastLatitude = String.valueOf(mLastLocation.getLatitude());
+            mLastLongitude = String.valueOf(mLastLocation.getLongitude());
+            return;
+        } else {
+            // location data not available for some reason since mLastLocation is null
+            mLastLatitude = DEFAULT_LOCATION_NOT_FOUND;
+            mLastLongitude = DEFAULT_LOCATION_NOT_FOUND;
+        }
+    }
+
+
+    /**
+     * For Google API Client
+     * @param i
+     */
+    @Override
+    public void onConnectionSuspended(int i) {
+        createAndShowDialog("The connection isn't live anymore", "Connection Suspended");
+    }
+
+
+    /**
+     * For Google API Client
+     * @param connectionResult
+     */
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        createAndShowDialog("Something is wrong with the connection", "Connection Failed");
+    }
+
+
+    /**
+     * Callback for when user responds to dialog for 'dangerous permissions'
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+
+        switch (requestCode) {
+            // fine location
+            case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay!
+                    PERMISSION_ACCESS_FINE_LOCATION = ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION);
+
+                    // request location update
+                    createLocationRequest();
+
+                    // activate upload button and change take photo
+                    // button functionality
+                    toggleUploadOn();
+
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    PERMISSION_ACCESS_COARSE_LOCATION = PackageManager.PERMISSION_DENIED;
+
+                    createAndShowDialog("Need access to location data to understand " +
+                            "where the photo was captured", "Permission not found");
+
+                    Toast.makeText(getApplicationContext(), "Need access to location data to " +
+                            "understand where the photo was captured", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+            // coarse location
+            case MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay!
+                    PERMISSION_ACCESS_COARSE_LOCATION = ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_COARSE_LOCATION);
+
+                    // request location update
+                    createLocationRequest();
+
+                    // activate upload button and change take photo
+                    // button functionality
+                    toggleUploadOn();
+
+                    // first time case: got permission!
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    PERMISSION_ACCESS_COARSE_LOCATION = PackageManager.PERMISSION_DENIED;
+
+                    createAndShowDialog("Need access to location data to understand " +
+                            "where the photo was captured", "Permission not found");
+
+                    Toast.makeText(getApplicationContext(), "Need access to location data to " +
+                            "understand where the photo was captured", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+            // write to external storage
+            case MY_PERMISSIONS_REQUEST_ACCESS_EXTERNAL_STORAGE: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay!
+                    PERMISSION_ACCESS_EXTERNAL_STORAGE = ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+                    // first time case: got permission! take a photo
+                    try {
+                        // since we must have EXTERNAL_STORAGE permission, mPhotoFile should
+                        // not be null
+                        mPhotoFile = createImageFile();
+                        takePhoto(new Intent(MediaStore.ACTION_IMAGE_CAPTURE));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    PERMISSION_ACCESS_EXTERNAL_STORAGE = PackageManager.PERMISSION_DENIED;
+
+                    createAndShowDialog("Need access to external storage to store captured " +
+                            "photo", "Permission not found");
+
+                    Toast.makeText(getApplicationContext(), "Need access to external storage " +
+                            "to store captured photo", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+        }
+    }
+
+
+    /**
+     * Checks if the application had Location permissions set.
+     * If not, the user is requested to set the permissions.
+     * This functions returns false if the permissions are not set,
+     * true otherwise
+     */
+    private boolean wereLocationServicesPermitted() {
+        // Fine Location Permission
+        PERMISSION_ACCESS_FINE_LOCATION = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION);
+
+        // Coarse Location Permission
+        PERMISSION_ACCESS_COARSE_LOCATION = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION);
+
+        /**
+         * Check if both permissions were set
+         * If so, return true
+         */
+        if (PERMISSION_ACCESS_FINE_LOCATION == PackageManager.PERMISSION_GRANTED
+                && PERMISSION_ACCESS_COARSE_LOCATION == PackageManager.PERMISSION_GRANTED)
+            return true;
+
+
+        /**
+         * Check if FINE_LOCATION permission is set. Request user if not.
+         */
+        if (PERMISSION_ACCESS_FINE_LOCATION != PackageManager.PERMISSION_GRANTED) {
+
+            // Does the the user needs an explanation?
+            // check if app has requested this permission previously and the user denied the request
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION))
+                createAndShowDialog("This app needs access to your device\'s accurate GPS" +
+                        "location to know exactly where this photo was taken" +
+                        "", "Accurate Location Required");
+
+            // request permission
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+        }
+
+
+        /**
+         * Check if COARSE_LOCATION permission is set. Request user if not.
+         */
+        if (PERMISSION_ACCESS_COARSE_LOCATION != PackageManager.PERMISSION_GRANTED) {
+
+            // Does the the user needs an explanation?
+            // check if app has requested this permission previously and the user denied the request
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION))
+                createAndShowDialog("This app needs access to your device\'s approximate GPS" +
+                        "location to know which region this photo was taken in" +
+                        "", "Approximate Location Required");
+
+            // request permission
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION);
+        }
+
+        return false;
+    }
+
+
+    /**
+     * Callback that hits everytime a request for new location
+     * goes through. mLastLocation object is updated. So are the
+     * strings containing latitude and longitude.
+     * @param location
+     */
+    @Override
+    public void onLocationChanged(Location location) {
+        mLastLocation = location;
+
+        // can check for updated time here
+        // mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
+
+        // update latitude and longitude
+        mLastLatitude = String.valueOf(mLastLocation.getLatitude());
+        mLastLongitude = String.valueOf(mLastLocation.getLongitude());
     }
 
 
@@ -719,26 +1075,193 @@ public class ToDoActivity extends Activity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             // Create the File where the photo should go
             try {
-                mPhotoFile = createImageFile();
+                if (haveWritePermissions()) {
+                    mPhotoFile = createImageFile();
+                    takePhoto(takePictureIntent);
+                }
             } catch (IOException ex) {
                 // Error occurred while creating the File
-                //
+                Toast.makeText(getApplicationContext(), "Could not create file to store photo", Toast.LENGTH_LONG).show();
             }
-            // Continue only if the File was successfully created
-            if (mPhotoFile != null) {
-                mPhotoFileUri = Uri.fromFile(mPhotoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoFileUri);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+
+        } else {
+            Toast.makeText(getApplicationContext(), "No camera activity to handle intent", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    private void takePhoto(Intent takePictureIntent) {
+        // Continue only if the File was successfully created
+        if (mPhotoFile != null) {
+            mPhotoFileUri = Uri.fromFile(mPhotoFile);
+            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, mPhotoFileUri);
+            startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+
+            // need location where picture was taken
+            // connect Google API client if not connected
+            if (!mGoogleApiClient.isConnected())
+                mGoogleApiClient.connect();
+
+            // location data is key
+            // if location data is not available, cannot let user upload photo
+            if (wereLocationServicesPermitted()) {
+                // request location update
+                createLocationRequest();
 
                 // activate upload button and change take photo
                 // button functionality
                 toggleUploadOn();
-
-                // need location where picture was taken
-                LocationListener locationListener = new MyLocationListener();
-//                mPictureLocation
             }
         }
+    }
+
+
+    protected void createLocationRequest() {
+        // create a location request object
+        if (mLocationRequest == null) {
+            mLocationRequest = new LocationRequest();
+
+            /**
+             * The priority of PRIORITY_HIGH_ACCURACY, combined
+             * with the ACCESS_FINE_LOCATION permission setting
+             * defined in the app manifest, and a fast update
+             * interval of 5000 milliseconds (5 seconds), causes
+             * the fused location provider to return location
+             * updates that are accurate to within a few feet.
+             * This approach is appropriate for mapping apps
+             * that display the location in real time.
+             */
+            // rate at which location updates will be received
+            mLocationRequest.setInterval(1000);
+
+            // location updates will not be received at a rate faster than this
+            mLocationRequest.setFastestInterval(5000);
+
+            // get most precise location possible
+            mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        }
+
+        // get current location settings
+        LocationSettingsRequest.Builder locationRequestBuilder = new LocationSettingsRequest.Builder()
+                .addLocationRequest(mLocationRequest);
+
+        // check if location settings are satisfied
+        final PendingResult<LocationSettingsResult> result =
+                LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
+                        locationRequestBuilder.build());
+
+        result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
+            @Override
+            public void onResult(LocationSettingsResult locationSettingsResult) {
+                final Status status = locationSettingsResult.getStatus();
+                final LocationSettingsStates states = locationSettingsResult.getLocationSettingsStates();
+                switch (status.getStatusCode()) {
+                    case LocationSettingsStatusCodes.SUCCESS:
+                        // All location settings are satisfied. The client can
+                        // initialize location requests here.
+                        startLocationUpdates();
+                        break;
+                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                        // Location settings are not satisfied, but this can be fixed
+                        // by showing the user a dialog.
+                        try {
+                            // Show the dialog by calling startResolutionForResult(),
+                            // and check the result in onActivityResult().
+                            status.startResolutionForResult(
+                                    ToDoActivity.this,
+                                    LOCATION_REQUEST_CHECK_SETTINGS);
+                        } catch (IntentSender.SendIntentException e) {
+                            // Ignore the error.
+                        }
+                        break;
+                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                        // Location settings are not satisfied. However, we have no way
+                        // to fix the settings so we won't show the dialog.
+                        // ...
+                        break;
+                }
+            }
+        });
+    }
+
+
+    protected void startLocationUpdates() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            wereLocationServicesPermitted();
+            return;
+        }
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, (LocationListener) this);
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch(resultCode) {
+            case RESULT_OK: {
+                mGoogleApiClient.connect();
+                createLocationRequest();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    
+    // Create a File object for storing the photo
+    private File createImageFile() throws IOException {
+        // Create an image file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+        // check if access to external storage exists
+        // if returned true, return the new file
+        // if returned false, user could have been requested for access
+        // so, need to check if permission is available now
+        // if still not available, return null
+
+        if(haveWritePermissions())
+            return File.createTempFile(
+                    imageFileName,  /* prefix */
+                    ".jpg",         /* suffix */
+                    storageDir      /* directory */
+            );
+        return null;
+    }
+
+
+    private boolean haveWritePermissions() {
+        // External storage write permission
+        PERMISSION_ACCESS_EXTERNAL_STORAGE = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+       /**
+         * Check if permissions were set
+         * If so, return true
+         */
+        if(PERMISSION_ACCESS_EXTERNAL_STORAGE == PackageManager.PERMISSION_GRANTED)
+            return true;
+
+
+        /**
+         * Check if EXTERNAL_STORAGE permission is set. Request user if not.
+         */
+        if(PERMISSION_ACCESS_EXTERNAL_STORAGE != PackageManager.PERMISSION_GRANTED) {
+
+            // Does the the user needs an explanation?
+            // check if app has requested this permission previously and the user denied the request
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE))
+                createAndShowDialog("This app needs access to your device\'s storage " +
+                        "to store the photo","Access to Storage required");
+
+            // request permission
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    MY_PERMISSIONS_REQUEST_ACCESS_EXTERNAL_STORAGE);
+        }
+
+        return PERMISSION_ACCESS_EXTERNAL_STORAGE == PackageManager.PERMISSION_GRANTED;
     }
 
 
@@ -781,42 +1304,6 @@ public class ToDoActivity extends Activity {
         Button uploadButton = (Button) findViewById(R.id.buttonUpload);
         uploadButton.setClickable(state);
         uploadButton.setEnabled(state);
-    }
-
-
-    // Create a File object for storing the photo
-    private File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
-        );
-        return image;
-    }
-
-    
-    /**
-     * pings http://www.google.com to check if device is connected
-     * to the internet
-     * @return  true if working internet connection is found
-     */
-    private boolean isInternetAvailable() {
-        try {
-            InetAddress ipAddr = InetAddress.getByName("http://www.google.com");
-
-            if (ipAddr.equals("")) {
-                return false;
-            } else {
-                return true;
-            }
-
-        } catch (Exception e) {
-            return false;
-        }
     }
 
 
@@ -890,55 +1377,6 @@ public class ToDoActivity extends Activity {
             }
             return future;
         }
-    }
-
-
-    /**
-     * Listener class to get coordinates
-     */
-    private class MyLocationListener implements LocationListener {
-
-        private final String TAG = "Location Listener";
-
-        @Override
-        public void onLocationChanged(Location loc) {
-            Toast.makeText(
-                    getBaseContext(),
-                    "Location changed: Lat: " + loc.getLatitude() + " Lng: "
-                            + loc.getLongitude(), Toast.LENGTH_SHORT).show();
-            String longitude = "Longitude: " + loc.getLongitude();
-            Log.v(TAG, longitude);
-            String latitude = "Latitude: " + loc.getLatitude();
-            Log.v(TAG, latitude);
-
-        /*------- To get city name from coordinates -------- */
-            String cityName = null;
-            Geocoder gcd = new Geocoder(getBaseContext(), Locale.getDefault());
-            List<Address> addresses;
-            try {
-                addresses = gcd.getFromLocation(loc.getLatitude(),
-                        loc.getLongitude(), 1);
-                if (addresses.size() > 0) {
-                    System.out.println(addresses.get(0).getLocality());
-                    cityName = addresses.get(0).getLocality();
-                }
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-            String s = longitude + "\n" + latitude + "\n\nMy Current City is: "
-                    + cityName;
-            Log.d(TAG, s);
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {}
-
-        @Override
-        public void onProviderEnabled(String provider) {}
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {}
     }
 
 }

@@ -41,20 +41,31 @@
       <file leaf-file-name="ToDoActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.7701974">
-              <caret line="800" column="4" selection-start-line="800" selection-start-column="4" selection-end-line="800" selection-end-column="4" />
+            <state vertical-scroll-proportion="5.5101795">
+              <caret line="1208" column="4" selection-start-line="1208" selection-start-column="4" selection-end-line="1208" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#onCreate#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#updateDataFromBundle#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#updateDataFromBundle#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onPause#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onResume#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onResume#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#authenticate#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#authenticate#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#8464#9570#0" expanded="true" />
-                <element signature="e#9569#9570#0" expanded="true" />
+                <element signature="e#12869#13975#0" expanded="true" />
+                <element signature="e#13974#13975#0" expanded="true" />
                 <element signature="docComment;method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#createTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#createTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
@@ -62,27 +73,25 @@
                 <element signature="method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#13034#13713#0" expanded="true" />
-                <element signature="e#13252#13532#0" expanded="true" />
-                <element signature="e#13531#13532#0" expanded="true" />
-                <element signature="e#13712#13713#0" expanded="true" />
+                <element signature="e#17321#18001#0" expanded="true" />
+                <element signature="e#17540#17820#0" expanded="true" />
+                <element signature="e#17819#17820#0" expanded="true" />
+                <element signature="e#18000#18001#0" expanded="true" />
                 <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#14590#14618#0" expanded="true" />
-                <element signature="e#15225#16736#0" expanded="true" />
-                <element signature="e#16276#16556#0" expanded="true" />
-                <element signature="e#16555#16556#0" expanded="true" />
-                <element signature="e#16735#16736#0" expanded="true" />
+                <element signature="e#19210#20724#0" expanded="true" />
+                <element signature="e#20262#20544#0" expanded="true" />
+                <element signature="e#20543#20544#0" expanded="true" />
+                <element signature="e#20723#20724#0" expanded="true" />
                 <element signature="docComment;method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="docComment;method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#17374#18285#0" expanded="true" />
-                <element signature="e#17774#18105#0" expanded="true" />
-                <element signature="e#18104#18105#0" expanded="true" />
-                <element signature="e#18284#18285#0" expanded="true" />
+                <element signature="e#21362#22275#0" expanded="true" />
+                <element signature="e#21763#22094#0" expanded="true" />
+                <element signature="e#22093#22094#0" expanded="true" />
+                <element signature="e#22274#22275#0" expanded="true" />
                 <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
@@ -91,64 +100,56 @@
                 <element signature="method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#20457#20608#0" expanded="true" />
-                <element signature="e#20607#20608#0" expanded="true" />
+                <element signature="e#24447#24598#0" expanded="true" />
+                <element signature="e#24597#24598#0" expanded="true" />
                 <element signature="docComment;method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="docComment;method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#22553#22759#0" expanded="true" />
-                <element signature="e#22758#22759#0" expanded="true" />
-                <element signature="e#23031#23032#0" expanded="true" />
-                <element signature="e#23099#23100#0" expanded="true" />
-                <element signature="e#23234#23477#0" expanded="true" />
-                <element signature="e#23476#23477#0" expanded="true" />
+                <element signature="e#36813#37019#0" expanded="true" />
+                <element signature="e#37018#37019#0" expanded="true" />
+                <element signature="e#37291#37292#0" expanded="true" />
+                <element signature="e#37359#37360#0" expanded="true" />
+                <element signature="e#37494#37737#0" expanded="true" />
+                <element signature="e#37736#37737#0" expanded="true" />
                 <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="e#41404#43187#0" expanded="true" />
+                <element signature="e#43186#43187#0" expanded="true" />
+                <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#createImageFile#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#25336#25370#0" expanded="true" />
+                <element signature="e#46927#46961#0" expanded="true" />
                 <element signature="docComment;method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#25806#25834#0" expanded="true" />
+                <element signature="e#47397#47425#0" expanded="true" />
                 <element signature="docComment;method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="method#createImageFile#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="docComment;method#isInternetAvailable#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="method#isInternetAvailable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#30245#30583#0" expanded="true" />
-                <element signature="e#30582#30583#0" expanded="true" />
-                <element signature="docComment;class#MyLocationListener#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="class#MyLocationListener#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="e#50703#51041#0" expanded="true" />
+                <element signature="e#51040#51041#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_to_do.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_to_do.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.689655">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -553,6 +554,36 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="preReleaseUnitTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:23.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV42300Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-appindexing:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppindexing840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-location:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesLocation840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-maps:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.microsoft.azure.android:azure-storage-android:0.6.0" />
@@ -1045,6 +1076,36 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:23.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportSupportV42300Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-appindexing:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppindexing840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-location:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesLocation840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-maps:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.microsoft.azure.android:azure-storage-android:0.6.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComMicrosoftAzureAndroidAzureStorageAndroid060Library" />
@@ -1173,7 +1234,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4346291994000" />
+        <entry key="$PROJECT_DIR$" value="4346369115000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1356,6 +1417,13 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-mobile-services-android-sdk/2.0.3/5de03bab93697321e5654831bb98df11ad4c19ac/azure-mobile-services-android-sdk-2.0.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-notifications-handler/1.0.1/c322af100020e6db539f2aa367698d4b88fc453f/azure-notifications-handler-1.0.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/448eeb5ff198d77fd16ce93fa896291cc1468de1/azure-storage-android-0.6.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-location/8.4.0/play-services-location-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-appindexing/8.4.0/play-services-appindexing-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-base/8.4.0/play-services-base-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/8.4.0/play-services-maps-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.4.0/play-services-basement-8.4.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.0.0/support-v4-23.0.0.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -1490,11 +1558,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/MyLocationListener.java" />
         <option value="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v21/values-v21.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout-v21/place_autocomplete_fragment.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_to_do.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" />
       </list>
     </option>
@@ -1572,56 +1640,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devpact" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devpact" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devpact" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1639,6 +1657,8 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/MobileShoppingAssistant-sample-master/MobileAssistantAndroidAppEngine" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1821,10 +1841,10 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.50752825" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221321" sideWeight="0.5087829" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2862109" sideWeight="0.49498117" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2862109" sideWeight="0.49247175" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1834,18 +1854,18 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24968633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3221321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221321" sideWeight="0.49121708" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1864,12 +1884,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java</url>
-          <line>807</line>
+          <line>1020</line>
           <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1882,14 +1902,25 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#updateDataFromBundle#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#updateDataFromBundle#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#authenticate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#authenticate#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#8464#9570#0" expanded="true" />
-            <element signature="e#9569#9570#0" expanded="true" />
+            <element signature="e#12869#13975#0" expanded="true" />
+            <element signature="e#13974#13975#0" expanded="true" />
             <element signature="docComment;method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#createTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
@@ -1897,27 +1928,25 @@
             <element signature="method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#13034#13713#0" expanded="true" />
-            <element signature="e#13252#13532#0" expanded="true" />
-            <element signature="e#13531#13532#0" expanded="true" />
-            <element signature="e#13712#13713#0" expanded="true" />
+            <element signature="e#17321#18001#0" expanded="true" />
+            <element signature="e#17540#17820#0" expanded="true" />
+            <element signature="e#17819#17820#0" expanded="true" />
+            <element signature="e#18000#18001#0" expanded="true" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#14590#14618#0" expanded="true" />
-            <element signature="e#15225#16736#0" expanded="true" />
-            <element signature="e#16276#16556#0" expanded="true" />
-            <element signature="e#16555#16556#0" expanded="true" />
-            <element signature="e#16735#16736#0" expanded="true" />
+            <element signature="e#19210#20724#0" expanded="true" />
+            <element signature="e#20262#20544#0" expanded="true" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20723#20724#0" expanded="true" />
             <element signature="docComment;method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#17374#18285#0" expanded="true" />
-            <element signature="e#17774#18105#0" expanded="true" />
-            <element signature="e#18104#18105#0" expanded="true" />
-            <element signature="e#18284#18285#0" expanded="true" />
+            <element signature="e#21362#22275#0" expanded="true" />
+            <element signature="e#21763#22094#0" expanded="true" />
+            <element signature="e#22093#22094#0" expanded="true" />
+            <element signature="e#22274#22275#0" expanded="true" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
@@ -1926,40 +1955,55 @@
             <element signature="method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#20457#20608#0" expanded="true" />
-            <element signature="e#20607#20608#0" expanded="true" />
+            <element signature="e#24447#24598#0" expanded="true" />
+            <element signature="e#24597#24598#0" expanded="true" />
             <element signature="docComment;method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#22553#22759#0" expanded="true" />
-            <element signature="e#22758#22759#0" expanded="true" />
-            <element signature="e#23031#23032#0" expanded="true" />
-            <element signature="e#23099#23100#0" expanded="true" />
-            <element signature="e#23234#23477#0" expanded="true" />
-            <element signature="e#23476#23477#0" expanded="true" />
+            <element signature="e#36813#37019#0" expanded="true" />
+            <element signature="e#37018#37019#0" expanded="true" />
+            <element signature="e#37291#37292#0" expanded="true" />
+            <element signature="e#37359#37360#0" expanded="true" />
+            <element signature="e#37494#37737#0" expanded="true" />
+            <element signature="e#37736#37737#0" expanded="true" />
             <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="e#41404#43187#0" expanded="true" />
+            <element signature="e#43186#43187#0" expanded="true" />
+            <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createImageFile#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#25336#25370#0" expanded="true" />
+            <element signature="e#46927#46961#0" expanded="true" />
             <element signature="docComment;method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#25806#25834#0" expanded="true" />
+            <element signature="e#47397#47425#0" expanded="true" />
             <element signature="docComment;method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createImageFile#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#isInternetAvailable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#isInternetAvailable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#30245#30583#0" expanded="true" />
-            <element signature="e#30582#30583#0" expanded="true" />
-            <element signature="docComment;class#MyLocationListener#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="class#MyLocationListener#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="e#50703#51041#0" expanded="true" />
+            <element signature="e#51040#51041#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2050,14 +2094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-v21/values-v21.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4225352">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_progress.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030303031">
@@ -2099,22 +2135,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13464992">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5924596">
-          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18850988">
@@ -2134,9 +2154,25 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2567325">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.254717">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_to_do.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.689655">
+        <state vertical-scroll-proportion="0.14962122">
           <caret line="47" column="43" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="43" />
           <folding />
         </state>
@@ -2145,30 +2181,41 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.32315978">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7701974">
-          <caret line="800" column="4" selection-start-line="800" selection-start-column="4" selection-end-line="800" selection-end-column="4" />
+        <state vertical-scroll-proportion="5.5101795">
+          <caret line="1208" column="4" selection-start-line="1208" selection-start-column="4" selection-end-line="1208" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#updateDataFromBundle#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#updateDataFromBundle#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#authenticate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#authenticate#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#8464#9570#0" expanded="true" />
-            <element signature="e#9569#9570#0" expanded="true" />
+            <element signature="e#12869#13975#0" expanded="true" />
+            <element signature="e#13974#13975#0" expanded="true" />
             <element signature="docComment;method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#createTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
@@ -2176,27 +2223,25 @@
             <element signature="method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#13034#13713#0" expanded="true" />
-            <element signature="e#13252#13532#0" expanded="true" />
-            <element signature="e#13531#13532#0" expanded="true" />
-            <element signature="e#13712#13713#0" expanded="true" />
+            <element signature="e#17321#18001#0" expanded="true" />
+            <element signature="e#17540#17820#0" expanded="true" />
+            <element signature="e#17819#17820#0" expanded="true" />
+            <element signature="e#18000#18001#0" expanded="true" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#14590#14618#0" expanded="true" />
-            <element signature="e#15225#16736#0" expanded="true" />
-            <element signature="e#16276#16556#0" expanded="true" />
-            <element signature="e#16555#16556#0" expanded="true" />
-            <element signature="e#16735#16736#0" expanded="true" />
+            <element signature="e#19210#20724#0" expanded="true" />
+            <element signature="e#20262#20544#0" expanded="true" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20723#20724#0" expanded="true" />
             <element signature="docComment;method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#17374#18285#0" expanded="true" />
-            <element signature="e#17774#18105#0" expanded="true" />
-            <element signature="e#18104#18105#0" expanded="true" />
-            <element signature="e#18284#18285#0" expanded="true" />
+            <element signature="e#21362#22275#0" expanded="true" />
+            <element signature="e#21763#22094#0" expanded="true" />
+            <element signature="e#22093#22094#0" expanded="true" />
+            <element signature="e#22274#22275#0" expanded="true" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
@@ -2205,40 +2250,55 @@
             <element signature="method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#20457#20608#0" expanded="true" />
-            <element signature="e#20607#20608#0" expanded="true" />
+            <element signature="e#24447#24598#0" expanded="true" />
+            <element signature="e#24597#24598#0" expanded="true" />
             <element signature="docComment;method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#22553#22759#0" expanded="true" />
-            <element signature="e#22758#22759#0" expanded="true" />
-            <element signature="e#23031#23032#0" expanded="true" />
-            <element signature="e#23099#23100#0" expanded="true" />
-            <element signature="e#23234#23477#0" expanded="true" />
-            <element signature="e#23476#23477#0" expanded="true" />
+            <element signature="e#36813#37019#0" expanded="true" />
+            <element signature="e#37018#37019#0" expanded="true" />
+            <element signature="e#37291#37292#0" expanded="true" />
+            <element signature="e#37359#37360#0" expanded="true" />
+            <element signature="e#37494#37737#0" expanded="true" />
+            <element signature="e#37736#37737#0" expanded="true" />
             <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="e#41404#43187#0" expanded="true" />
+            <element signature="e#43186#43187#0" expanded="true" />
+            <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createImageFile#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#25336#25370#0" expanded="true" />
+            <element signature="e#46927#46961#0" expanded="true" />
             <element signature="docComment;method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#25806#25834#0" expanded="true" />
+            <element signature="e#47397#47425#0" expanded="true" />
             <element signature="docComment;method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createImageFile#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#isInternetAvailable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#isInternetAvailable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#30245#30583#0" expanded="true" />
-            <element signature="e#30582#30583#0" expanded="true" />
-            <element signature="docComment;class#MyLocationListener#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="class#MyLocationListener#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="e#50703#51041#0" expanded="true" />
+            <element signature="e#51040#51041#0" expanded="true" />
           </folding>
         </state>
       </provider>

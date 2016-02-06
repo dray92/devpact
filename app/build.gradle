@@ -4,14 +4,14 @@ android {
     compileSdkVersion 23
     buildToolsVersion "19.1.0"
     useLibrary 'org.apache.http.legacy'
+
     defaultConfig {
         applicationId "com.example.devpactapp"
         minSdkVersion 15
-        targetSdkVersion 20
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -33,5 +33,5 @@ dependencies {
     compile 'com.microsoft.azure:azure-mobile-services-android-sdk:2.0.3'
     compile 'com.microsoft.azure:azure-notifications-handler:1.0.1@jar'
     compile 'com.microsoft.azure.android:azure-storage-android:0.6.0@aar'
-//    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
 }
