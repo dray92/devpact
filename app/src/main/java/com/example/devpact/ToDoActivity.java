@@ -275,8 +275,6 @@ public class ToDoActivity extends Activity implements
                     new String[]{Manifest.permission.READ_PHONE_STATE},
                     MY_PERMISSIONS_REQUEST_READ_PHONE_STATE);
         }
-
-
     }
 
 
@@ -611,7 +609,13 @@ public class ToDoActivity extends Activity implements
         // Create a new item
         final ToDoItem item = new ToDoItem();
 
-        item.setText(mTextNewToDo.getText().toString());
+        // if user doesn't add description
+        String text = mTextNewToDo.getText().toString();
+        if(text.length() < 0) {
+            text = mPhoneNumber + "(" + mLastLatitude + "," + mLastLongitude + ")";
+        }
+
+        item.setText(text);
         item.setComplete(false);
         item.setContainerName("todoitemimages");
         item.setPhoneNumber(mPhoneNumber);
@@ -628,6 +632,7 @@ public class ToDoActivity extends Activity implements
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
+                android.os.Debug.waitForDebugger();
                 try {
                     final ToDoItem entity = addItemInTable(item);
 
@@ -928,8 +933,8 @@ public class ToDoActivity extends Activity implements
 //                    createAndShowDialog("Need access to location data to understand " +
 //                            "where the photo was captured", "Permission not found");
 
-                    Toast.makeText(getApplicationContext(), "Need access to location data to " +
-                            "understand where the photo was captured", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Access to GPS needed for photo " +
+                            "location", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -960,8 +965,8 @@ public class ToDoActivity extends Activity implements
 //                    createAndShowDialog("Need access to location data to understand " +
 //                            "where the photo was captured", "Permission not found");
 
-                    Toast.makeText(getApplicationContext(), "Need access to location data to " +
-                            "understand where the photo was captured", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Access to GPS needed for photo " +
+                            "location", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -1204,7 +1209,11 @@ public class ToDoActivity extends Activity implements
         }
     }
 
-
+    /**
+     * Initialize the mLocationRequest object to start sampling
+     * Checks to see if location settings are handled, and take
+     * appropriate actions.
+     */
     protected void createLocationRequest() {
         // create a location request object
         if (mLocationRequest == null) {
@@ -1305,7 +1314,10 @@ public class ToDoActivity extends Activity implements
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = getApplicationContext().getFilesDir();//Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        File storageDir = getApplicationContext().getExternalFilesDir(null);
+                //Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                //getApplicationContext().getFilesDir();
+
 
         mPhotoFileExists = true;
 
