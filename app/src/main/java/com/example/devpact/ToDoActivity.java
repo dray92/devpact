@@ -603,6 +603,35 @@ public class ToDoActivity extends Activity implements
             return;
         }
 
+        // check if file is not readable for some reason
+        if(new File(mPhotoFileUri.getPath()).length() == 0)
+            createAndShowDialog("Upload failed", "File Access Error");
+
+//        Bitmap bitmap = BitmapFactory.decodeFile(mPhotoFileUri.getPath());
+//        File newImageFile = null;
+//        try {
+//            newImageFile = createImageFile();
+//            FileOutputStream newImageFileStream = null;
+//            try {
+//                newImageFileStream = new FileOutputStream(newImageFile);
+//                bitmap.compress(Bitmap.CompressFormat.JPEG, 10, newImageFileStream); // bmp is your Bitmap instance
+//                // PNG is a lossless format, the compression factor (100) is ignored
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            } finally {
+//                try {
+//                    if (newImageFileStream != null) {
+//                        newImageFileStream.close();
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
         // deactivate upload button
         toggleUploadOff();
 

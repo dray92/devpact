@@ -11,10 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e51147-b201-438c-a676-3d32537acdb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4$1.class" />
@@ -64,12 +60,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ToDoActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ToDoActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="600" column="39" selection-start-line="600" selection-start-column="39" selection-end-line="600" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.39473686">
+              <caret line="613" column="57" selection-start-line="613" selection-start-column="57" selection-end-line="613" selection-end-column="57" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="e#10682#10683#0" expanded="true" />
@@ -97,9 +94,7 @@
                 <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -140,107 +135,6 @@
                 <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proguard-rules.pro" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CloudBlob.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1945" column="21" selection-start-line="1945" selection-start-column="21" selection-end-line="1945" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CloudBlockBlob.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlockBlob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="749" column="0" selection-start-line="749" selection-start-column="0" selection-end-line="749" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StreamMd5AndLength.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/core/StreamMd5AndLength.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#595#0" expanded="false" />
-                <element signature="e#1376#1377#0" expanded="false" />
-                <element signature="e#1419#1420#0" expanded="false" />
-                <element signature="e#1643#1644#0" expanded="false" />
-                <element signature="e#1696#1697#0" expanded="false" />
-                <element signature="e#2143#2144#0" expanded="false" />
-                <element signature="e#2188#2189#0" expanded="false" />
-                <element signature="e#2309#2310#0" expanded="false" />
-                <element signature="e#2351#2352#0" expanded="false" />
-                <element signature="e#2733#2734#0" expanded="false" />
-                <element signature="e#2769#2770#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Uri.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-23/android.jar!/android/net/Uri.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToDoItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#968#969#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1207#1208#0" expanded="true" />
-                <element signature="e#1288#1289#0" expanded="true" />
-                <element signature="e#1321#1322#0" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1442#1443#0" expanded="true" />
-                <element signature="e#1622#1623#0" expanded="true" />
-                <element signature="e#1664#1665#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
-                <element signature="e#2106#2107#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
-                <element signature="e#2602#2603#0" expanded="true" />
-                <element signature="e#2781#2782#0" expanded="true" />
-                <element signature="e#2827#2828#0" expanded="true" />
-                <element signature="e#3055#3056#0" expanded="true" />
-                <element signature="e#3091#3092#0" expanded="true" />
-                <element signature="e#3266#3267#0" expanded="true" />
-                <element signature="e#3310#3311#0" expanded="true" />
-                <element signature="e#3802#3803#0" expanded="true" />
-                <element signature="e#3850#3851#0" expanded="true" />
-                <element signature="e#4082#4083#0" expanded="true" />
-                <element signature="e#4114#4115#0" expanded="true" />
-                <element signature="e#5602#5603#0" expanded="true" />
-                <element signature="e#5675#5676#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1683,8 +1577,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="983" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1729,6 +1624,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -1772,8 +1669,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1788,7 +1683,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1963,7 +1858,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="983" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1971,10 +1866,10 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28138074" sideWeight="0.5750916" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026527" sideWeight="0.44017094" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28138074" sideWeight="0.42490843" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026527" sideWeight="0.55982906" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1987,7 +1882,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28138074" sideWeight="0.5750916" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31026527" sideWeight="0.43772894" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2019,8 +1914,9 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="649" column="0" selection-start-line="649" selection-start-column="0" selection-end-line="649" selection-end-column="0" />
+          <caret line="600" column="39" selection-start-line="600" selection-start-column="39" selection-end-line="600" selection-end-column="39" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
             <element signature="e#10682#10683#0" expanded="true" />
@@ -2048,9 +1944,138 @@
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onConnected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1945" column="21" selection-start-line="1945" selection-start-column="21" selection-end-line="1945" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlockBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="749" column="0" selection-start-line="749" selection-start-column="0" selection-end-line="749" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/core/StreamMd5AndLength.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-23/android.jar!/android/net/Uri.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="649" column="0" selection-start-line="649" selection-start-column="0" selection-end-line="649" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="e#10682#10683#0" expanded="true" />
+            <element signature="e#10713#10714#0" expanded="true" />
+            <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#authenticate#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#authenticate#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#createTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#createTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -2115,19 +2140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#595#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1643#1644#0" expanded="false" />
-            <element signature="e#1696#1697#0" expanded="false" />
-            <element signature="e#2143#2144#0" expanded="false" />
-            <element signature="e#2188#2189#0" expanded="false" />
-            <element signature="e#2309#2310#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2733#2734#0" expanded="false" />
-            <element signature="e#2769#2770#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2135,7 +2147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2143,36 +2154,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2602#2603#0" expanded="true" />
-            <element signature="e#2781#2782#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#3055#3056#0" expanded="true" />
-            <element signature="e#3091#3092#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#4082#4083#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#5602#5603#0" expanded="true" />
-            <element signature="e#5675#5676#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2189,6 +2171,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
             <element signature="e#10682#10683#0" expanded="true" />
@@ -2216,9 +2199,7 @@
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -2267,36 +2248,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2602#2603#0" expanded="true" />
-            <element signature="e#2781#2782#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#3055#3056#0" expanded="true" />
-            <element signature="e#3091#3092#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#4082#4083#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#5602#5603#0" expanded="true" />
-            <element signature="e#5675#5676#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2313,6 +2265,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
             <element signature="e#10682#10683#0" expanded="true" />
@@ -2340,9 +2293,7 @@
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -2391,36 +2342,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2602#2603#0" expanded="true" />
-            <element signature="e#2781#2782#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#3055#3056#0" expanded="true" />
-            <element signature="e#3091#3092#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#4082#4083#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#5602#5603#0" expanded="true" />
-            <element signature="e#5675#5676#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2437,6 +2359,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
             <element signature="e#10682#10683#0" expanded="true" />
@@ -2464,9 +2387,7 @@
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -2516,6 +2437,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
             <element signature="e#10682#10683#0" expanded="true" />
@@ -2543,9 +2465,7 @@
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -2594,36 +2514,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
-          <folding>
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2602#2603#0" expanded="true" />
-            <element signature="e#2781#2782#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#3055#3056#0" expanded="true" />
-            <element signature="e#3091#3092#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#4082#4083#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#5602#5603#0" expanded="true" />
-            <element signature="e#5675#5676#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2780,43 +2671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2602#2603#0" expanded="true" />
-            <element signature="e#2781#2782#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#3055#3056#0" expanded="true" />
-            <element signature="e#3091#3092#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#4082#4083#0" expanded="true" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#5602#5603#0" expanded="true" />
-            <element signature="e#5675#5676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-23/android.jar!/android/os/MessageQueue.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2828,19 +2682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#595#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1643#1644#0" expanded="false" />
-            <element signature="e#1696#1697#0" expanded="false" />
-            <element signature="e#2143#2144#0" expanded="false" />
-            <element signature="e#2188#2189#0" expanded="false" />
-            <element signature="e#2309#2310#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2733#2734#0" expanded="false" />
-            <element signature="e#2769#2770#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2864,7 +2705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2876,11 +2716,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="600" column="39" selection-start-line="600" selection-start-column="39" selection-end-line="600" selection-end-column="39" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.94736844">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39473686">
+          <caret line="613" column="57" selection-start-line="613" selection-start-column="57" selection-end-line="613" selection-end-column="57" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
             <element signature="e#10682#10683#0" expanded="true" />
@@ -2908,9 +2764,7 @@
             <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
@@ -2952,14 +2806,6 @@
             <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
