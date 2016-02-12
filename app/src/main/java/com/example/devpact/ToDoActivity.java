@@ -661,7 +661,9 @@ public class ToDoActivity extends Activity implements
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
+                // debug in background task
                 android.os.Debug.waitForDebugger();
+
                 try {
                     final ToDoItem entity = addItemInTable(item);
 

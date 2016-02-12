@@ -11,26 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e51147-b201-438c-a676-3d32537acdb9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$RefreshTokenCacheFilter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$RefreshTokenCacheFilter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$RefreshTokenCacheFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$RefreshTokenCacheFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/constants.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -60,17 +42,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ToDoActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ToDoActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39473686">
-              <caret line="613" column="57" selection-start-line="613" selection-start-column="57" selection-end-line="613" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="665" column="0" selection-start-line="665" selection-start-column="0" selection-end-line="665" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="e#10682#10683#0" expanded="true" />
-                <element signature="e#10713#10714#0" expanded="true" />
                 <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -140,12 +119,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="BitmapCompress.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="70" />
-              <folding />
+            <state vertical-scroll-proportion="0.71394515">
+              <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1015#1088#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,6 +138,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -1562,7 +1545,10 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCmpress.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/constants.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java" />
       </list>
     </option>
   </component>
@@ -1623,10 +1609,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1648,6 +1632,28 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devpact" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1667,8 +1673,20 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devpact" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1866,10 +1884,10 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026527" sideWeight="0.44017094" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31026527" sideWeight="0.44261295" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026527" sideWeight="0.55982906" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31026527" sideWeight="0.55738705" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1877,7 +1895,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221321" sideWeight="0.5087829" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24297924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18315019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1892,6 +1910,38 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026527" sideWeight="0.44261295" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026527" sideWeight="0.55738705" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31026527" sideWeight="0.43772894" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.49247175" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998747" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221321" sideWeight="0.5087829" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24297924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1911,91 +1961,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="600" column="39" selection-start-line="600" selection-start-column="39" selection-end-line="600" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
-            <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onResume#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onSaveInstanceState#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#authenticate#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#authenticate#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#detectAndWaitForAuthentication#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#waitAndUpdateRequestToken#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#createTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#checkItem#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#checkItem#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#checkItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#uploadPhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#addItemInTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#refreshItemsFromTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#cacheUserToken#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#loadUserTokenCache#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#refreshItemsFromMobileServiceTable#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createAndShowDialogFromTask#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createAndShowDialog#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createAndShowDialog#1;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#runAsyncTask#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onConnected#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onConnected#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onConnectionSuspended#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onConnectionFailed#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#wereLocationServicesPermitted#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#toggleUploadOff#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2047,11 +2012,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="649" column="0" selection-start-line="649" selection-start-column="0" selection-end-line="649" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
             <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -2171,11 +2133,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
             <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -2265,11 +2224,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
             <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -2359,11 +2315,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
             <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -2437,11 +2390,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
             <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -2542,14 +2492,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_to_do.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
@@ -2583,13 +2533,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_progress.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030303031">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v11/styles.xml">
@@ -2601,23 +2551,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout-v21/place_autocomplete_fragment.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3212121">
           <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13478819">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -2628,14 +2578,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_list_to_do.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -2645,23 +2595,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.254717">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_to_do.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14962122">
           <caret line="47" column="43" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="43" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-23/android.jar!/android/view/View.class">
@@ -2682,14 +2624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2731,16 +2665,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2631579">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16625616">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/constants.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05363528">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39473686">
-          <caret line="613" column="57" selection-start-line="613" selection-start-column="57" selection-end-line="613" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="665" column="0" selection-start-line="665" selection-start-column="0" selection-end-line="665" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10713#10714#0" expanded="true" />
             <element signature="docComment;method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#onStop#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#ToDoActivity#0" expanded="false" />
@@ -2805,6 +2760,17 @@
             <element signature="method#setUploadButton#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#RefreshTokenCacheFilter#0;class#ToDoActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71394515">
+          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1015#1088#0" expanded="true" />
           </folding>
         </state>
       </provider>

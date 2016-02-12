@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--100 KB max image size-->
+    <item type="integer" name="MAX_IMAGE_SIZE_BYTES" format="integer">102400</item>
+</resources>
