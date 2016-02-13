@@ -1375,6 +1375,11 @@ public class ToDoActivity extends Activity implements
         // some time, moving to an async task
     }
 
+    @Override
+    public void onAsyncTaskComplete(File comprssdFile) {
+        // compare compressed file to original file
+    }
+
     private boolean haveWritePermissions() {
         // External storage write permission
         PERMISSION_ACCESS_EXTERNAL_STORAGE = ContextCompat.checkSelfPermission(this,
