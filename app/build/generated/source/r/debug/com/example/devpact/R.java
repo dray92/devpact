@@ -336,7 +336,11 @@ containing a value of this type.
         public static final int wide=0x7f070008;
     }
     public static final class integer {
-        public static final int google_play_services_version=0x7f090000;
+        public static final int MAX_IMAGE_SIZE_BYTES=0x7f090000;
+        public static final int MINIMUM_DIMENSION=0x7f090001;
+        public static final int TARGET_IMAGE_HEIGHT=0x7f090002;
+        public static final int TARGET_IMAGE_WIDTH=0x7f090003;
+        public static final int google_play_services_version=0x7f090004;
     }
     public static final class layout {
         public static final int activity_to_do=0x7f030000;

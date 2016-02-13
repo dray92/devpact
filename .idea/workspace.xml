@@ -11,9 +11,124 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e51147-b201-438c-a676-3d32537acdb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/constants.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$ProgressFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$RefreshTokenCacheFilter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity$RefreshTokenCacheFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoItemAdapter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/devpact/ToDoItemAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/base/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/location/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/maps/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/microsoft/azure/android/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/microsoft/azure/android/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/azure-mobile-services-android-sdk-2.0.3-694fd946e47cd9378f096ae91d68daff940244a7.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/azure-notifications-handler-1.0.1-9b5fd9736466930fa8c0a635bbdfe55a60fba74c.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-0d5793fbeeab9b59278e09981ca1a5e834549de6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-4fc46aa8dbe681c4a111c305ef1f1437081d8f92.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-6629c1f64cb72f7a2164e947dbf869ce60c259e3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-824acf0cccca03ecc3e73ea73e965062d1f97377.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-d08247ecdb397ff51154a7cdbde709138ebbf84e.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-e8ba3635839ccfd620b87fb0d0c811e7c7c33c47.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/gson-2.3-aa65f091cb4e3bd0a4dd33844b7738a307f9b231.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/guava-18.0-a4bd214d08239c4f2d0229ee1b7b421d85c7d3b6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-ba84029109923f20327a9028261101002aadb6da.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-57044fe36fa30fb2b5aa929dde8ca8e1deb106bf.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/AsyncTaskResponse.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/AsyncTaskResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/Bitmap2File.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/Bitmap2File.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/devpact/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/devpact/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/constants.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/constants.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="devpact.iws" />
@@ -46,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="665" column="0" selection-start-line="665" selection-start-column="0" selection-end-line="665" selection-end-column="0" />
+              <caret line="1374" column="45" selection-start-line="1374" selection-start-column="45" selection-end-line="1374" selection-end-column="45" />
               <folding>
                 <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
@@ -101,10 +216,10 @@
                 <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-                <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+                <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
                 <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -119,14 +234,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BitmapCompress.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java">
+      <file leaf-file-name="Bitmap2File.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/Bitmap2File.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71394515">
-              <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.37906137">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1015#1088#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BitmapCompress.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="67" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1193#1254#0" expanded="true" />
+                <element signature="e#1943#2003#0" expanded="true" />
+                <element signature="e#2031#2090#0" expanded="true" />
+                <element signature="method#calculateInSampleSize#0;class#BitmapCompress#0" expanded="false" />
+                <element signature="e#3370#3440#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,8 +268,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="valueResourceFile" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -1546,9 +1678,11 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCmpress.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/constants.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/AsyncTaskResponse.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/devpact/Bitmap2File.java" />
       </list>
     </option>
   </component>
@@ -1876,11 +2010,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="983" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="983" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.49247175" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32871974" sideWeight="0.49247175" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1961,22 +2095,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1945" column="21" selection-start-line="1945" selection-start-column="21" selection-end-line="1945" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/blob/CloudBlockBlob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="749" column="0" selection-start-line="749" selection-start-column="0" selection-end-line="749" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure.android/azure-storage-android/0.6.0/aa0f9391ab8e0e9ef28d00886de663aba43064a8/azure-storage-android-0.6.0-sources.jar!/com/microsoft/azure/storage/core/StreamMd5AndLength.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2065,10 +2183,10 @@
             <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -2186,10 +2304,10 @@
             <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -2277,10 +2395,10 @@
             <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -2368,10 +2486,10 @@
             <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -2443,10 +2561,10 @@
             <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -2683,8 +2801,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/constants.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05363528">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.14302741">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/AsyncTaskResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2166065">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -2692,7 +2818,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/ToDoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="665" column="0" selection-start-line="665" selection-start-column="0" selection-end-line="665" selection-end-column="0" />
+          <caret line="1374" column="45" selection-start-line="1374" selection-start-column="45" selection-end-line="1374" selection-end-column="45" />
           <folding>
             <element signature="method#onCreate#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#retrievePhoneNumber#0;class#ToDoActivity#0" expanded="false" />
@@ -2747,10 +2873,10 @@
             <element signature="method#onLocationChanged#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
             <element signature="class#ProgressFilter#0;class#ToDoActivity#0" expanded="false" />
-            <element signature="method#takePicture#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#takePhoto#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#createLocationRequest#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#startLocationUpdates#0;class#ToDoActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#haveWritePermissions#0;class#ToDoActivity#0" expanded="false" />
             <element signature="docComment;method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
             <element signature="method#toggleUploadOn#0;class#ToDoActivity#0" expanded="false" />
@@ -2766,11 +2892,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/BitmapCompress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71394515">
-          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1015#1088#0" expanded="true" />
+            <element signature="e#1193#1254#0" expanded="true" />
+            <element signature="e#1943#2003#0" expanded="true" />
+            <element signature="e#2031#2090#0" expanded="true" />
+            <element signature="method#calculateInSampleSize#0;class#BitmapCompress#0" expanded="false" />
+            <element signature="e#3370#3440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/devpact/Bitmap2File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37906137">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

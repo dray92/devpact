@@ -2,4 +2,9 @@
 <resources>
     <!--100 KB max image size-->
     <item type="integer" name="MAX_IMAGE_SIZE_BYTES" format="integer">102400</item>
+
+    <!--16 x 9 aspect ratio for image-->
+    <item type="integer" name="TARGET_IMAGE_HEIGHT" format="integer">512</item>
+    <item type="integer" name="TARGET_IMAGE_WIDTH" format="integer">288</item>
+    <item type="integer" name="MINIMUM_DIMENSION" format="integer">288</item>
 </resources>

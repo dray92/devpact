@@ -42,6 +42,12 @@
     <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
     <dimen name="place_autocomplete_progress_size">24dp</dimen>
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
+    <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/src/main/res/values/constants.xml -->
+    <eat-comment/>
+    <item format="integer" name="MAX_IMAGE_SIZE_BYTES" type="integer">102400</item>
+    <item format="integer" name="MINIMUM_DIMENSION" type="integer">288</item>
+    <item format="integer" name="TARGET_IMAGE_HEIGHT" type="integer">512</item>
+    <item format="integer" name="TARGET_IMAGE_WIDTH" type="integer">288</item>
     <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">8487000</integer>

@@ -135,7 +135,11 @@ int id terrain 0x7f070005
 int id textNewToDo 0x7f070010
 int id textViewTitle 0x7f07000e
 int id wide 0x7f070008
-int integer google_play_services_version 0x7f090000
+int integer MAX_IMAGE_SIZE_BYTES 0x7f090000
+int integer MINIMUM_DIMENSION 0x7f090001
+int integer TARGET_IMAGE_HEIGHT 0x7f090002
+int integer TARGET_IMAGE_WIDTH 0x7f090003
+int integer google_play_services_version 0x7f090004
 int layout activity_to_do 0x7f030000
 int layout place_autocomplete_fragment 0x7f030001
 int layout place_autocomplete_item_powered_by_google 0x7f030002

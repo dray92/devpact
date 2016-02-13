@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -74,7 +75,7 @@ import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperati
 
 
 public class ToDoActivity extends Activity implements
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, AsyncTaskResponse {
 
     /**
      * Mobile Service Client reference
@@ -1367,6 +1368,12 @@ public class ToDoActivity extends Activity implements
         return null;
     }
 
+    @Override
+    public void onAsyncTaskComplete(Bitmap bmp) {
+        // pipe new bitmap to file
+        // since this requires calling compress which can take
+        // some time, moving to an async task
+    }
 
     private boolean haveWritePermissions() {
         // External storage write permission

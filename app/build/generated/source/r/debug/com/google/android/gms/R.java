@@ -145,7 +145,7 @@ public final class R {
 		public static final int wide = 0x7f070008;
 	}
 	public static final class integer {
-		public static final int google_play_services_version = 0x7f090000;
+		public static final int google_play_services_version = 0x7f090004;
 	}
 	public static final class layout {
 		public static final int place_autocomplete_fragment = 0x7f030001;
