@@ -18,10 +18,11 @@ public class Bitmap2File extends AsyncTask<Void, Void, File> {
     private final Bitmap scaledBitmap;
     private final File compressedFile;
 
-    public Bitmap2File(Bitmap scaledBitmap, File outFile, Activity activity) {
+    public Bitmap2File(Bitmap scaledBitmap, File outFile, Activity activity, AsyncTaskResponse fileResponse) {
         this.compressedFile = outFile;
         this.scaledBitmap = scaledBitmap;
         this.mActivity = new WeakReference<Activity>(activity);
+        this.thisResponse = fileResponse;
     }
 
     @Override
@@ -48,6 +49,6 @@ public class Bitmap2File extends AsyncTask<Void, Void, File> {
 
     @Override
     protected void onPostExecute(File compressedFile) {
-        this.thisResponse.onAsyncTaskComplete(compressedFile);
+        thisResponse.onAsyncTaskComplete(compressedFile);
     }
 }

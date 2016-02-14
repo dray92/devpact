@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/gson-2.3-aa65f091cb4e3bd0a4dd33844b7738a307f9b231.jar" />
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-4fc46aa8dbe681c4a111c305ef1f1437081d8f92.jar" />
     </item>
     <item
         jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
@@ -16,25 +16,11 @@
         <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-d08247ecdb397ff51154a7cdbde709138ebbf84e.jar" />
     </item>
     <item
-        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-notifications-handler/1.0.1/c322af100020e6db539f2aa367698d4b88fc453f/azure-notifications-handler-1.0.1.jar"
+        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-mobile-services-android-sdk/2.0.3/5de03bab93697321e5654831bb98df11ad4c19ac/azure-mobile-services-android-sdk-2.0.3.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="c322af100020e6db539f2aa367698d4b88fc453f">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-notifications-handler-1.0.1-9b5fd9736466930fa8c0a635bbdfe55a60fba74c.jar" />
-    </item>
-    <item
-        jar="/Users/Debosmit/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-57044fe36fa30fb2b5aa929dde8ca8e1deb106bf.jar" />
-    </item>
-    <item
-        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-4fc46aa8dbe681c4a111c305ef1f1437081d8f92.jar" />
+        sha1="5de03bab93697321e5654831bb98df11ad4c19ac">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-mobile-services-android-sdk-2.0.3-694fd946e47cd9378f096ae91d68daff940244a7.jar" />
     </item>
     <item
         jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
@@ -44,32 +30,18 @@
         <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-0d5793fbeeab9b59278e09981ca1a5e834549de6.jar" />
     </item>
     <item
-        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-notifications-handler/1.0.1/c322af100020e6db539f2aa367698d4b88fc453f/azure-notifications-handler-1.0.1.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-e8ba3635839ccfd620b87fb0d0c811e7c7c33c47.jar" />
+        sha1="c322af100020e6db539f2aa367698d4b88fc453f">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-notifications-handler-1.0.1-9b5fd9736466930fa8c0a635bbdfe55a60fba74c.jar" />
     </item>
     <item
-        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-ba84029109923f20327a9028261101002aadb6da.jar" />
-    </item>
-    <item
-        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.microsoft.azure.android/azure-storage-android/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="83e59f115d18d0ff8ca28891e1793a4485a13a99">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-6629c1f64cb72f7a2164e947dbf869ce60c259e3.jar" />
-    </item>
-    <item
-        jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-mobile-services-android-sdk/2.0.3/5de03bab93697321e5654831bb98df11ad4c19ac/azure-mobile-services-android-sdk-2.0.3.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="5de03bab93697321e5654831bb98df11ad4c19ac">
-        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/azure-mobile-services-android-sdk-2.0.3-694fd946e47cd9378f096ae91d68daff940244a7.jar" />
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/gson-2.3-aa65f091cb4e3bd0a4dd33844b7738a307f9b231.jar" />
     </item>
     <item
         jar="/Users/Debosmit/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
@@ -84,6 +56,34 @@
         revision="19.1.0"
         sha1="04de44f90606c77f3b28cf44861f306290505aac">
         <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-824acf0cccca03ecc3e73ea73e965062d1f97377.jar" />
+    </item>
+    <item
+        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-e8ba3635839ccfd620b87fb0d0c811e7c7c33c47.jar" />
+    </item>
+    <item
+        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.microsoft.azure.android/azure-storage-android/0.6.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="83e59f115d18d0ff8ca28891e1793a4485a13a99">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/classes-6629c1f64cb72f7a2164e947dbf869ce60c259e3.jar" />
+    </item>
+    <item
+        jar="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-ba84029109923f20327a9028261101002aadb6da.jar" />
+    </item>
+    <item
+        jar="/Users/Debosmit/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-57044fe36fa30fb2b5aa929dde8ca8e1deb106bf.jar" />
     </item>
 
 </items>

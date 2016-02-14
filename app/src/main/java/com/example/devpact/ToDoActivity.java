@@ -10,7 +10,9 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -61,7 +63,9 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.text.SimpleDateFormat;
@@ -75,7 +79,7 @@ import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperati
 
 
 public class ToDoActivity extends Activity implements
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, AsyncTaskResponse {
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     /**
      * Mobile Service Client reference
@@ -611,10 +615,15 @@ public class ToDoActivity extends Activity implements
         // deactivate upload button
         toggleUploadOff();
 
-        BitmapCompress bitmapCompress = new BitmapCompress(mPhotoFile.getPath(), this);
-        bitmapCompress.execute();
-    }
+        try {
+            File compressedFile = createImageFile();
+            BitmapCompress bitmapCompress = new BitmapCompress(mPhotoFile.getPath(), compressedFile, this);
+            bitmapCompress.execute();
+        } catch(Exception e) {
+            startUploadTask();
+        }
 
+    }
 
     /**
      * Helper method to start an upload task
@@ -1343,7 +1352,6 @@ public class ToDoActivity extends Activity implements
         // if returned false, user could have been requested for access
         // so, need to check if permission is available now
         // if still not available, return null
-
         if(haveWritePermissions())
             return File.createTempFile(
                     imageFileName,  /* prefix */
@@ -1353,35 +1361,6 @@ public class ToDoActivity extends Activity implements
         return null;
     }
 
-    @Override
-    public void onAsyncTaskComplete(Bitmap bmp) {
-        // pipe new bitmap to file
-        // since this requires calling compress which can take
-        // some time, moving to an async task
-        File mCompressedImage = null;
-        if (haveWritePermissions()) {
-            try {
-                mCompressedImage = createImageFile();
-            } catch(Exception e) {
-                Log.d("On post bitmap scaling", "Failed to get new file");
-            }
-        }
-
-        if(mCompressedImage != null) {
-            Bitmap2File bitmap2File = new Bitmap2File(bmp, mCompressedImage, this);
-            bitmap2File.execute();
-        }
-    }
-
-    @Override
-    public void onAsyncTaskComplete(File comprssdFile) {
-        // compare compressed file to original file
-        if(comprssdFile.length() > 1000 && comprssdFile.length() < mPhotoFile.length()) {
-            // upload compressed file
-            mPhotoFile = comprssdFile;
-        }
-        startUploadTask();
-    }
 
     private boolean haveWritePermissions() {
         // External storage write permission
@@ -1476,8 +1455,7 @@ public class ToDoActivity extends Activity implements
         public ListenableFuture<ServiceFilterResponse> handleRequest(
                 final ServiceFilterRequest request,
                 final NextServiceFilterCallback nextServiceFilterCallback
-        )
-        {
+        ) {
             // In this example, if authentication is already in progress we block the request
             // until authentication is complete to avoid unnecessary authentications as
             // a result of HTTP status code 401.
@@ -1532,4 +1510,122 @@ public class ToDoActivity extends Activity implements
         }
     }
 
+    public class BitmapCompress extends AsyncTask<Void, Void, File> {
+
+        private final String imgFilepath;
+        private final WeakReference<Activity> mActivity;
+        private final File newFile;
+
+        public BitmapCompress(String OrigImgFilepath, File newFile, Activity activity) {
+            this.imgFilepath = OrigImgFilepath;
+            this.mActivity = new WeakReference<Activity>(activity);
+            this.newFile = newFile;
+        }
+
+        @Override
+        protected File doInBackground(Void... voids) {
+            // debug in background task
+            android.os.Debug.waitForDebugger();
+
+            // check if activity is still available
+            // no point doing any work otherwise
+            if(mActivity == null)
+                return new File(imgFilepath);
+
+            // max file size
+            // stored in constants.xml
+            Resources mActivityResources = mActivity.get().getResources();
+            int MAX_SIZE = mActivityResources.getInteger(R.integer.MAX_IMAGE_SIZE_BYTES);
+
+            // if file does not exists, there is nothing to do
+            // if file is below limit, nothing to do
+            if(new File(imgFilepath).length() <= MAX_SIZE)
+                return new File(imgFilepath);
+
+            // get bitmap from filepath
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;  // setting to true, since don't need bitmap
+            // returned at this point => that would lead
+            // to memory wastage
+            BitmapFactory.decodeFile(imgFilepath, options);
+
+            // get target dimensions
+            int targetHeight = mActivityResources.getInteger(R.integer.TARGET_IMAGE_HEIGHT);
+            int targetWidth = mActivityResources.getInteger(R.integer.TARGET_IMAGE_WIDTH);
+
+            // compress bitmap
+            /* greater dimension needs to be scaled down to 512
+             * other dimension will be scaled by same value
+             * if height > width => portrait mode, then continue as normal ....
+             * else, height < width
+             *      => landscape mode
+             *      => swap targetHeight, targetWidth
+             */
+            if(options.outHeight < options.outWidth) {
+                // swap targetHeight and targetWidth
+                targetHeight ^= targetWidth;
+                targetWidth ^= targetHeight;
+                targetHeight ^= targetWidth;
+            }
+            int sampleSize = calculateInSampleSize(options, targetWidth, targetHeight);
+
+            options.inJustDecodeBounds = false;
+            options.inSampleSize = sampleSize;
+            Bitmap compressedBmp = BitmapFactory.decodeFile(imgFilepath, options);
+
+            FileOutputStream outputStream = null;
+            try {
+                outputStream = new FileOutputStream(newFile);
+                int QUALITY = mActivityResources.getInteger(R.integer.COMPRESS_QUALITY);
+
+                compressedBmp.compress(Bitmap.CompressFormat.JPEG, QUALITY, outputStream);
+                outputStream.close();
+                return newFile;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return new File(imgFilepath);
+        }
+
+        // required
+        private int calculateInSampleSize(
+                BitmapFactory.Options options, int reqWidth, int reqHeight) {
+
+            // check if activity is still available
+            // no point doing any work otherwise
+            if(mActivity == null)
+                return 1;
+
+            int minDim = mActivity.get().getResources().getInteger(R.integer.MINIMUM_DIMENSION);
+            if(reqHeight < minDim || reqWidth < minDim)
+                return 1;
+
+            // Raw height and width of image
+            final int height = options.outHeight;
+            final int width = options.outWidth;
+            int inSampleSize = 1;
+
+            if (height > reqHeight || width > reqWidth) {
+
+                final int halfHeight = height / 2;
+                final int halfWidth = width / 2;
+
+                // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+                // height and width larger than the requested height and width.
+                while ((halfHeight / inSampleSize) > reqHeight
+                        && (halfWidth / inSampleSize) > reqWidth) {
+                    inSampleSize *= 2;
+                }
+            }
+
+            return inSampleSize;
+        }
+
+        @Override
+        protected void onPostExecute(File CompressedBmp) {
+            ToDoActivity.this.mPhotoFile = CompressedBmp;
+            ToDoActivity.this.startUploadTask();
+        }
+    }
 }
