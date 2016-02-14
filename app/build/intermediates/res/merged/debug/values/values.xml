@@ -44,6 +44,7 @@
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
     <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/src/main/res/values/constants.xml -->
     <eat-comment/>
+    <item format="integer" name="COMPRESS_QUALITY" type="integer">90</item>
     <item format="integer" name="MAX_IMAGE_SIZE_BYTES" type="integer">102400</item>
     <item format="integer" name="MINIMUM_DIMENSION" type="integer">288</item>
     <item format="integer" name="TARGET_IMAGE_HEIGHT" type="integer">512</item>

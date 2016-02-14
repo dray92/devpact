@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.lang.ref.WeakReference;
 
 /**
@@ -14,22 +15,39 @@ public class Bitmap2File extends AsyncTask<Void, Void, File> {
 
     private AsyncTaskResponse thisResponse = null;
     private final WeakReference<Activity> mActivity;
-    private final Bitmap bitmap;
+    private final Bitmap scaledBitmap;
     private final File compressedFile;
 
-    public Bitmap2File(Bitmap bmp, File outFile, Activity activity) {
+    public Bitmap2File(Bitmap scaledBitmap, File outFile, Activity activity) {
         this.compressedFile = outFile;
-        this.bitmap = bmp;
+        this.scaledBitmap = scaledBitmap;
         this.mActivity = new WeakReference<Activity>(activity);
     }
 
     @Override
     protected File doInBackground(Void... voids) {
-        return null;
+        // debug in background task
+        android.os.Debug.waitForDebugger();
+
+        try {
+            FileOutputStream outputStream = new FileOutputStream(compressedFile);
+
+            // if activity isn't around anymore
+            if(mActivity == null)
+                return compressedFile;
+
+            int QUALITY = mActivity.get().getResources().getInteger(R.integer.COMPRESS_QUALITY);
+
+            scaledBitmap.compress(Bitmap.CompressFormat.JPEG, QUALITY, outputStream);
+            outputStream.close();
+        } catch(Exception e) {
+            return null;
+        }
+        return compressedFile;
     }
 
     @Override
     protected void onPostExecute(File compressedFile) {
-
+        this.thisResponse.onAsyncTaskComplete(compressedFile);
     }
 }

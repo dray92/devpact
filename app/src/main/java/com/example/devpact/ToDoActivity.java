@@ -608,40 +608,25 @@ public class ToDoActivity extends Activity implements
         if(new File(mPhotoFileUri.getPath()).length() == 0)
             createAndShowDialog("Upload failed", "File Access Error");
 
-//        Bitmap bitmap = BitmapFactory.decodeFile(mPhotoFileUri.getPath());
-//        File newImageFile = null;
-//        try {
-//            newImageFile = createImageFile();
-//            FileOutputStream newImageFileStream = null;
-//            try {
-//                newImageFileStream = new FileOutputStream(newImageFile);
-//                bitmap.compress(Bitmap.CompressFormat.JPEG, 10, newImageFileStream); // bmp is your Bitmap instance
-//                // PNG is a lossless format, the compression factor (100) is ignored
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            } finally {
-//                try {
-//                    if (newImageFileStream != null) {
-//                        newImageFileStream.close();
-//                    }
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
         // deactivate upload button
         toggleUploadOff();
 
+        BitmapCompress bitmapCompress = new BitmapCompress(mPhotoFile.getPath(), this);
+        bitmapCompress.execute();
+    }
+
+
+    /**
+     * Helper method to start an upload task
+     */
+    private void startUploadTask() {
         // Create a new item
         final ToDoItem item = new ToDoItem();
 
+
         // if user doesn't add description
         String text = mTextNewToDo.getText().toString();
-        if(text.length() < 0) {
+        if(text.length() == 0) {
             text = mPhoneNumber + "(" + mLastLatitude + "," + mLastLongitude + ")";
         }
 
@@ -681,7 +666,7 @@ public class ToDoActivity extends Activity implements
                         CloudBlockBlob blobFromSASCredential =
                                 new CloudBlockBlob(imageUri, cred);
 
-                        blobFromSASCredential.uploadFromFile(mPhotoFileUri.getPath());
+                        blobFromSASCredential.uploadFromFile(mPhotoFile.getPath());
                     }
 
                     runOnUiThread(new Runnable() {
@@ -1373,11 +1358,29 @@ public class ToDoActivity extends Activity implements
         // pipe new bitmap to file
         // since this requires calling compress which can take
         // some time, moving to an async task
+        File mCompressedImage = null;
+        if (haveWritePermissions()) {
+            try {
+                mCompressedImage = createImageFile();
+            } catch(Exception e) {
+                Log.d("On post bitmap scaling", "Failed to get new file");
+            }
+        }
+
+        if(mCompressedImage != null) {
+            Bitmap2File bitmap2File = new Bitmap2File(bmp, mCompressedImage, this);
+            bitmap2File.execute();
+        }
     }
 
     @Override
     public void onAsyncTaskComplete(File comprssdFile) {
         // compare compressed file to original file
+        if(comprssdFile.length() > 1000 && comprssdFile.length() < mPhotoFile.length()) {
+            // upload compressed file
+            mPhotoFile = comprssdFile;
+        }
+        startUploadTask();
     }
 
     private boolean haveWritePermissions() {

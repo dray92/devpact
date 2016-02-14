@@ -30,9 +30,8 @@ public class BitmapCompress extends AsyncTask<Void, Void, Bitmap> {
 
         // check if activity is still available
         // no point doing any work otherwise
-        if(mActivity == null) {
+        if(mActivity == null)
             return BitmapFactory.decodeFile(imgFilepath);
-        }
 
         // max file size
         // stored in constants.xml
