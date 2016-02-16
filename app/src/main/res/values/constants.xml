@@ -9,5 +9,5 @@
     <item type="integer" name="MINIMUM_DIMENSION" format="integer">288</item>
 
     <!--compress function quality-->
-    <item type="integer" name="COMPRESS_QUALITY" format="integer">100</item>
+    <item type="integer" name="COMPRESS_QUALITY" format="integer">80</item>
 </resources>
