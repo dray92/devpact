@@ -18,6 +18,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -84,19 +85,19 @@ public class ToDoActivity extends Activity implements
     /**
      * Mobile Service Client reference
      */
-    private MobileServiceClient mClient;
+    public static MobileServiceClient mClient;
 
 
     /**
      * Mobile Service Table used to access data
      */
-    private MobileServiceTable<ToDoItem> mToDoTable;
+    private static MobileServiceTable<ToDoItem> mToDoTable;
 
 
     /**
      * Adapter to sync the items list with the view
      */
-    private ToDoItemAdapter mAdapter;
+    public static ToDoItemAdapter mAdapter;
 
 
     /**
@@ -234,6 +235,15 @@ public class ToDoActivity extends Activity implements
                     .addApi(LocationServices.API)
                     .build();
         }
+
+        // onClick added because onClick function in XML is not getting called
+        final Button mUploadButton = (Button)findViewById(R.id.buttonUpload);
+        mUploadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadPhoto(view);
+            }
+        });
 
         updateDataFromBundle(savedInstanceState);
     }
@@ -613,7 +623,7 @@ public class ToDoActivity extends Activity implements
             createAndShowDialog("Upload failed", "File Access Error");
 
         // deactivate upload button
-        toggleUploadOff();
+        toggleUploadOn();
 
         try {
             File compressedFile = createImageFile();
@@ -632,6 +642,8 @@ public class ToDoActivity extends Activity implements
         // Create a new item
         final ToDoItem item = new ToDoItem();
 
+        // deactivate upload
+        toggleUploadOff();
 
         // if user doesn't add description
         String text = mTextNewToDo.getText().toString();
@@ -705,7 +717,7 @@ public class ToDoActivity extends Activity implements
      * @param item
      *            The item to Add
      */
-    public ToDoItem addItemInTable(ToDoItem item) throws ExecutionException, InterruptedException {
+    public static ToDoItem addItemInTable(ToDoItem item) throws ExecutionException, InterruptedException {
         ToDoItem entity = mToDoTable.insert(item).get();
         return entity;
     }
@@ -858,7 +870,7 @@ public class ToDoActivity extends Activity implements
      * @param task
      * @return
      */
-    private AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
+    public static AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             return task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         } else {
@@ -919,7 +931,7 @@ public class ToDoActivity extends Activity implements
      */
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-        createAndShowDialog("Something is wrong with the connection", "Connection Failed");
+        createAndShowDialog(connectionResult.getErrorCode()  + "  " + connectionResult.getErrorMessage(), "Connection Failed");
     }
 
 
@@ -1198,9 +1210,11 @@ public class ToDoActivity extends Activity implements
                 if (haveWritePermissions()) {
                     mPhotoFile = createImageFile();
                     takePhoto(takePictureIntent);
+
                 }
             } catch (IOException ex) {
                 // Error occurred while creating the File
+                Log.d("File creation", ex.getMessage());
                 Toast.makeText(getApplicationContext(), "Could not create file to store photo", Toast.LENGTH_SHORT).show();
             }
 
@@ -1211,6 +1225,16 @@ public class ToDoActivity extends Activity implements
 
 
     private void takePhoto(Intent takePictureIntent) {
+        // this really shouldn't be here
+        // onClick added because onClick function in XML is not getting called
+        final Button mUploadButton = (Button)findViewById(R.id.buttonUpload);
+        mUploadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadPhoto(view);
+            }
+        });
+
         // Continue only if the File was successfully created
         if (mPhotoFile != null) {
             mPhotoFileUri = Uri.fromFile(mPhotoFile);
@@ -1325,12 +1349,24 @@ public class ToDoActivity extends Activity implements
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         switch(resultCode) {
             case RESULT_OK: {
                 mGoogleApiClient.connect();
                 createLocationRequest();
             }
         }
+
+        // photo taken
+        if(requestCode == REQUEST_TAKE_PHOTO) {
+            Intent intent = new Intent(this, DisplayImageActivity.class);
+            intent.putExtra("image", mPhotoFile);
+            intent.putExtra("lat", mLastLatitude);
+            intent.putExtra("long", mLastLongitude);
+            intent.putExtra("phone", mPhoneNumber);
+            startActivity(intent);
+        }
+
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -1340,9 +1376,10 @@ public class ToDoActivity extends Activity implements
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = getApplicationContext().getExternalFilesDir(null);
-                //Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-                //getApplicationContext().getFilesDir();
+        File storageDir =
+//                getApplicationContext().getExternalFilesDir(null);
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+//                getApplicationContext().getFilesDir();
 
 
         mPhotoFileExists = true;

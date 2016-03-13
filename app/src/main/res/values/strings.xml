@@ -9,5 +9,6 @@
     <string name="preview_button_text">Take Photo</string>
     <string name="reset_preview_button_text">Retake</string>
     <string name="upload_button_text">Upload</string>
-    
+    <string name="title_activity_display_image">DisplayImageActivity</string>
+
 </resources>

@@ -30,6 +30,10 @@
     <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <declare-styleable name="MapAttrs"><attr format="enum" name="mapType"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="satellite" value="2"/><enum name="terrain" value="3"/><enum name="hybrid" value="4"/></attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/><attr format="boolean" name="ambientEnabled"/></declare-styleable>
     <declare-styleable name="SignInButton"><attr format="reference|enum" name="buttonSize"><enum name="standard" value="0"/><enum name="wide" value="1"/><enum name="icon_only" value="2"/></attr><attr format="reference|enum" name="colorScheme"><enum name="dark" value="0"/><enum name="light" value="1"/><enum name="auto" value="2"/></attr><attr format="reference|string" name="scopeUris"/></declare-styleable>
+    <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/values/location_dimens.xml -->
     <eat-comment/>
     <dimen name="place_autocomplete_button_padding">16dp</dimen>
@@ -44,7 +48,7 @@
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
     <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/src/main/res/values/constants.xml -->
     <eat-comment/>
-    <item format="integer" name="COMPRESS_QUALITY" type="integer">100</item>
+    <item format="integer" name="COMPRESS_QUALITY" type="integer">50</item>
     <item format="integer" name="MAX_IMAGE_SIZE_BYTES" type="integer">102400</item>
     <item format="integer" name="MINIMUM_DIMENSION" type="integer">288</item>
     <item format="integer" name="TARGET_IMAGE_HEIGHT" type="integer">512</item>
@@ -114,6 +118,7 @@
     <eat-comment/>
     <string name="preview_button_text">Take Photo</string>
     <string name="reset_preview_button_text">Retake</string>
+    <string name="title_activity_display_image">DisplayImageActivity</string>
     <string name="upload_button_text">Upload</string>
     <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/src/main/res/values/styles.xml -->
     <eat-comment/>
