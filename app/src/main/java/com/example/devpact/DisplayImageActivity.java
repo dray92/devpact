@@ -49,8 +49,6 @@ public class DisplayImageActivity extends Activity {
 
         ImageView mImageView = (ImageView) findViewById(R.id.imageView);
 
-        int aspectRatio = getAspectRatio();
-
         mImageView.setImageBitmap(
                 decodeSampledBitmap(100,100));
 
@@ -62,16 +60,7 @@ public class DisplayImageActivity extends Activity {
             }
         });
     }
-
-    public int getAspectRatio() {
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(mPhotoFile.getAbsolutePath(), options);
-
-        return options.outHeight/options.outWidth;
-    }
-
+    
     public Bitmap decodeSampledBitmap(int reqWidth, int reqHeight) {
 
         // First decode with inJustDecodeBounds=true to check dimensions
@@ -203,7 +192,7 @@ public class DisplayImageActivity extends Activity {
 
                         blobFromSASCredential.uploadFromFile(mPhotoFile.getPath());
                         Log.d("Azure", "Upload started");
-                        Toast.makeText(DisplayImageActivity.this, "Azure upload started", Toast.LENGTH_LONG);
+
                     }
 
                     runOnUiThread(new Runnable() {
@@ -220,7 +209,7 @@ public class DisplayImageActivity extends Activity {
                 return null;
             }
         };
-
+        Toast.makeText(DisplayImageActivity.this, "Azure upload started", Toast.LENGTH_LONG);
         ToDoActivity.runAsyncTask(task);
         onBackPressed();
     }
@@ -239,9 +228,14 @@ public class DisplayImageActivity extends Activity {
         }
 
         @Override
-        protected File doInBackground(Void... voids) {
-            Log.d("Compressing Photo","Entered task");
+        protected void onPreExecute() {
             Toast.makeText(DisplayImageActivity.this, "Compressing photo", Toast.LENGTH_LONG);
+        }
+
+        @Override
+        protected File doInBackground(Void... voids) {
+            Log.d("Compressing Photo", "Entered task");
+
             // debug in background task
             android.os.Debug.waitForDebugger();
 
