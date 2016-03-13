@@ -30,6 +30,13 @@
         android:text="Upload"
         android:id="@+id/upload"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:accessibilityLiveRegion="assertive"
+        android:background="#c8c8c8"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:longClickable="true" />
 </RelativeLayout>
 <!-- From: file:/Users/Debosmit/Documents/Workspace/devpact/app/src/main/res/layout/activity_display_image.xml -->

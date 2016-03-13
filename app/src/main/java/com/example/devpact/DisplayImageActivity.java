@@ -60,7 +60,7 @@ public class DisplayImageActivity extends Activity {
             }
         });
     }
-    
+
     public Bitmap decodeSampledBitmap(int reqWidth, int reqHeight) {
 
         // First decode with inJustDecodeBounds=true to check dimensions
